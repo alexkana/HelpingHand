@@ -34,14 +34,15 @@
 /* box-shadow: 0 0 3px 0 #000;*/
 /*}*/
 
-.carousel-inner {
-    width: 55%;
-    max-height: 600px;
-    margin: auto;
-}
+/*.carousel-inner {*/
+/*    width: 55%;*/
+/*    max-height: 600px;*/
+/*    margin: auto;*/
+/*}*/
+
 
 .carousel-fade .carousel-item, .carousel-item img {
-    max-height: 90vh;
+    max-height: 95vh;
 }
 
 .carousel-control-prev-icon,

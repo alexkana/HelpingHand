@@ -1,41 +1,50 @@
 * {
- font-size: 100%;
- font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.jumbotron{
-   margin-top: 70px;
-   margin-bottom:70px;
-}
-
-
-#form{
- margin-top: 50px;
- margin-bottom: 50px;
- width:50%;
- height:50%;
+.jumbotron {
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 
-
-.navbar{
- padding: 1.1rem;
- background-color:white !important;
+#form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    height: 50%;
 }
 
-.nav-link{
-margin:1.1em;
-font-size:1.2em;
-font-weight:400;
+
+.navbar {
+    padding: 1.1rem;
+    background-color: white !important;
 }
 
-/*.carousel-inner img{
- width:100%
- height:100%
- box-shadow: 0 0 3px 0 #000;
+.nav-link {
+    margin: 1.1em;
+    font-size: 1.2em;
+    font-weight: 400;
+}
 
-} */
+/*.carousel-inner img{*/
+/* width:100%;*/
+/* height:100%;*/
+/* box-shadow: 0 0 3px 0 #000;*/
+/*}*/
 
-.carousel-fade .carousel-item, .carousel-item img  {
-  max-height: 90vh;
+.carousel-inner {
+    width: 55%;
+    max-height: 600px;
+    margin: auto;
+}
+
+.carousel-fade .carousel-item, .carousel-item img {
+    max-height: 90vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%)
 }

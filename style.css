@@ -49,3 +49,25 @@
 .carousel-control-next-icon {
     filter: invert(100%)
 }
+
+.rect{
+    text-align:center;
+    background-image: linear-gradient(to right, darkred , white);
+    width:800px;
+    height:60px;
+    line-height:60px;
+    color:white;
+    margin:20px auto;
+    position:relative;
+    float:left
+}
+
+.header_font{
+    font-family: fantasy;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.flag_icon{
+    height: 32px;
+    width: 32px;
+}

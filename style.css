@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+
 * {
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -6,6 +8,7 @@
 .jumbotron {
     margin-top: 70px;
     margin-bottom: 70px;
+
 }
 
 
@@ -51,23 +54,48 @@
 }
 
 .rect{
+border: 1em red;
+  border-radius: 1.25em;
+    box-shadow: rgba(249, 105, 78, 1) 0px 4px 12px;
+
     text-align:center;
-    background-image: linear-gradient(to right, darkred , white);
-    width:800px;
+   /* background-image: linear-gradient(to right, darkred , white); */
+    /* background: linear-gradient(to left, #d31027, #ea384d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: linear-gradient(to right, #d31027, #ea384d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: linear-gradient(to left, #ff512f, #dd2476); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width:600px;
     height:60px;
-    line-height:60px;
+    line-height:42px;
     color:white;
     margin:20px auto;
     position:relative;
     float:left
+
+}
+
+.img-fluid{
+border: 1em ;
+  border-radius: 1.1em;
+/* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+ /*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
 }
 
 .header_font{
-    font-family: fantasy;
-    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    /*font-family: 'Varela',fantasy; */
+    font-weight:600;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 
 .flag_icon{
     height: 32px;
     width: 32px;
+}
+
+.shadow p-3 mb-5 bg-white rounded{
+  border-radius: 1.2em;
+
 }

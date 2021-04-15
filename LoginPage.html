@@ -69,10 +69,10 @@
                             </div>
                         </li>
                     </ul>
-<!--                    <select class="selectpicker ms-auto" data-width="fit">-->
-<!--                        <option>Ελληνικά</option>-->
-<!--                        <option>English</option>-->
-<!--                    </select>-->
+                    <!--                    <select class="selectpicker ms-auto" data-width="fit">-->
+                    <!--                        <option>Ελληνικά</option>-->
+                    <!--                        <option>English</option>-->
+                    <!--                    </select>-->
                 </div>
             </div>
         </nav>
@@ -81,16 +81,29 @@
 
 <div class="container">
     <section id="form">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">login page :</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <style>
+            h1 {text-align: center;}
+            p {text-align: center;}
+            div {text-align: center;}
+        </style>
+
+        <form>
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <p>Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς στον λογαριασμό σου!</p>
+            <p><input type="text" id="login" class="fadeIn second" name="login" placeholder="Email ή όνομα χρήστη"></p>
+            <p><input type="text" id="password" class="fadeIn third" name="login" placeholder="Κωδικός πρόσβασης"></p>
+            <p><button type="button" class="btn btn-success">Σύνδεση</button></p>
+        </form>
+
+        <div id="formFooter1">
+            <a class="underlineHover" href="#">Ξέχασες τον Κωδικό σου?</a>
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Αποστολή</a>
+
+        <div id="formFooter2">
+            <a>  Γίνε μέλος πατώντας  </a>
+            <a class="underlineHover" href="#">ΕΔΩ!</a>
         </div>
 
     </section>

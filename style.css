@@ -38,7 +38,7 @@
 /*}*/
 
 /*.carousel-inner {*/
-/*    width: 55%;*/
+/*    width: 50%;*/
 /*    max-height: 600px;*/
 /*    margin: auto;*/
 /*}*/
@@ -56,14 +56,14 @@
 .rect{
 border: 1em red;
   border-radius: 1.25em;
-    box-shadow: rgba(249, 105, 78, 1) 0px 4px 12px;
+    box-shadow: rgb(14, 0, 0) 0px 4px 12px;
 
     text-align:center;
    /* background-image: linear-gradient(to right, darkred , white); */
     /* background: linear-gradient(to left, #d31027, #ea384d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /*background: linear-gradient(to right, #d31027, #ea384d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /*background: linear-gradient(to left, #ff512f, #dd2476); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ad1124, #2b0707); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     width:600px;
     height:60px;

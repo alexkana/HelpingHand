@@ -1,7 +1,7 @@
 let CURRENT_LANGUAGE = 'el'
 
 function set_head(img, lang) {
-    document.getElementById("lang_selector").innerHTML = "<img class=\"flag_icon\" src=\"images/" + img + "\" alt=\"...\">&nbsp" + lang
+    document.getElementById("lang_selector").innerHTML = "<img class=\"flag_icon\" src=\"../images/"+ img +"\" alt=\"\">&nbsp" + lang
 }
 
 function trans_navbar(language) {

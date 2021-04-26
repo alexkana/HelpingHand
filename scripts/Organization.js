@@ -20,8 +20,6 @@ function checkLanguageText() {
     let text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15,
         text16, text17;
 
-
-    console.log("now")
     if (sessionStorage.getItem('language') === 'en') {
         text1 = ' The Village Enterprise is an organizations that works to end extreme poverty in rural Africa through\n' +
             '                    entrepreneurship and innovation by implementing simple and cost-effective program. So far, the\n' +

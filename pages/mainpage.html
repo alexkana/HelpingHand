@@ -18,6 +18,7 @@
     <link rel="icon" href="../images/logo.png">
     <!--Javascript File-->
     <script type="text/javascript" src="../scripts/script.js"></script>
+    <script type="text/javascript" src="../scripts/Mainpage.js"></script>
 
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
@@ -61,10 +62,10 @@
                             </script>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a onclick="sessionStorage.setItem('language','el'); trans_navbar()" href="#" class="dropdown-item">
+                            <a onclick="sessionStorage.setItem('language','el'); trans_navbar(); checkLanguageText();" href="#" class="dropdown-item">
                                 <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                             </a>
-                            <a onclick="sessionStorage.setItem('language','en'); trans_navbar()" href="#" class="dropdown-item">
+                            <a onclick="sessionStorage.setItem('language','en'); trans_navbar(); checkLanguageText();" href="#" class="dropdown-item">
                                 <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp English
                             </a>
                         </div>
@@ -119,8 +120,8 @@
 
 <div class="container-fluid">
     <div class="jumbotron">
-        <h1 id="title_text" class="display-4">Στόχος μας η εξάλειψη της παγκόσμιας φτώχειας.</h1>
-        <p id="title_sub_text" class="lead">Η συμβολή σας στο έργο μας είναι καθοριστική</p>
+        <h1 id="title_text" class="display-4"></h1>
+        <p id="title_sub_text" class="lead"></p>
 <!--        <hr class="my-4">-->
 <!--        <p>Κάνε τώρα εγγραφή ώστε να γίνεις μέλος της προσπάθειας μας και να λαμβάνεις συνεχείς ενημερώσεις σχετικά με-->
 <!--            το έργο μας</p>-->
@@ -147,14 +148,12 @@
             <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cG9vcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" class="img-fluid">
         </div>
         <div class="col-md-12 col-lg-6">
-            <h3 class="rect header_font" style="height: 100px" >Το οικουμενικό φαινόμενο της φτώχειας και τα αίτια της</h3>
+            <h3 id="title1" class="rect header_font" style="height: 100px" ></h3>
             <br><br><br><br><br><br><br>
             <div class="shadow p-3 mb-5 bg-white rounded">
-                <p>
-                    Η Φτώχεια είναι ένα οικουμενικό φαινόμενο που επηρεάζεται από την παγκόσμια διαστρωμάτωση, την διεθνή οικονομία και τις κοινωνικές ανισότητες, καθώς τη συναντάμε σε όλα τα κράτη, ακόμα και στα οικονομικά ισχυρά.
+                <p id="p11">
                 </p>
-                <p>
-                    Μια από τις βασικότερες αιτίες τις φτώχειας είναι η κοινωνική ανισότητα, που σημαίνει άνιση κατανομή των πλουτοπαραγωγικών πηγών, του εισοδήματος και των περιουσιακών στοιχείων μεταξύ των ατόμων και των κρατών. Άλλες αιτίες είναι η προκατάληψη, οι διακρίσεις και ο ρατσισμός απέναντι σε ορισμένες κοινωνικές ομάδες. Ακόμα, αιτίες φτώχειας αποτελούν ο πόλεμος, οι φυσικές καταστροφές και η ανεργία. Τα φαίνομενα της παραοικονομίας, της φοροδιαφυγής και της κακοδιαχείρισης, δεν αποτελούν πρωτογενείς αιτίες, αλλά προκαλούν επιδείνωση της φτώχειας στο επίπεδο του κοινωνικού συνόλου.
+                <p id="p12">
                 </p>
             </div>
         </div>
@@ -166,21 +165,13 @@
 <div class="container-fluid padding">
     <div class="row padding">
         <div class="col-md-12 col-lg-6">
-            <h3 class="rect header_font">Η φτώχεια μαστίζει το πλανήτη</h3>
+            <h3 id="title2" class="rect header_font"></h3>
             <br><br><br><br><br>
             <div class="shadow p-3 mb-5 bg-white rounded">
-                <p>
-                    Τo ποσοστό της ακραίας φτώχειας έχει μειωθεί πάνω από το μισό από το 1990. Ωστόσο, ένας στους πέντε
-                    ανθρώπους στις αναπτυσσόμενες περιοχές συνεχίζει να ζει με λιγότερο από 1,25 δολάρια την ημέρα ενώ
-                    υπάρχουν εκατομμύρια άνθρωποι που κερδίζουν μόλις λίγο παραπάνω από αυτό το ποσό, με αρκετούς να
-                    κινδυνεύουν να ξανακυλήσουν στη φτώχεια. </p>
-                <p>
-                    Η φτώχεια είναι κάτι περισσότερο από την έλλειψη εισοδήματος και πόρων για την εξασφάλιση βιώσιμων
-                    συνθηκών διαβίωσης. Η φτώχεια έχει μορφές όπως η πείνα, ο υποσιτισμός, η περιορισμένη πρόσβαση στην
-                    εκπαίδευση και σε άλλες βασικές υπηρεσίες, η κοινωνική διάκριση και ο αποκλεισμός, καθώς και η
-                    απουσία
-                    συμμετοχής στη λήψη αποφάσεων. Η οικονομική ανάπτυξη πρέπει να συντελείται χωρίς αποκλεισμούς, να
-                    παρέχει βιώσιμες θέσεις εργασίας και να προάγει την ισότητα.
+                <p id="p21">
+                    </p>
+                <p id="p22">
+
                 </p>
             </div>
         </div>
@@ -199,21 +190,11 @@
         </div>
         <div class="col-md-12 col-lg-6">
 
-            <h3 class="rect header_font" style="height: 130px">Πάνω απο το 11% του παγκόσμιου πληθυσμού ζούν κάτω απο το
-                όριο της φτώχειας</h3>
+            <h3 id="title3" class="rect header_font" style="height: 130px"></h3>
             <br><br><br><br><br><br><br>
             <div class="shadow p-3 mb-5 bg-white rounded">
-                <p>
-                    Σχεδόν 800 εκατ. άνθρωποι (περίπου 11% του παγκόσμιου πληθυσμού) ζουν με λιγότερα από 1,9 δολ. την
-                    ημέρα, αν και το 1990 στην κατάσταση αυτή βρισκόταν 35% του παγκόσμιου πληθυσμού (1,9 δισ. άτομα).
-                    Σύμφωνα με την Παγκόσμια Τράπεζα, το 2013, 4 δισ. άτομα, περισσότερα από τον μισό παγκόσμιο πληθυσμό
-                    ζούσαν με 1,9- 10 δολάρια την ημέρα. Η υποσαχάρια Αφρική είναι η περιοχή με τον περισσότερο φτωχό
-                    πληθυσμό, καθώς το 2013, 390 εκατ. άτομα ζούσαν με λιγότερα από 1,90 δολάρια την ημέρα. Το ίδιο έτος
-                    υπήρχαν 25 εκατ. εξαιρετικά φτωχοί σε Κίνα και Ινδονησία μαζί, ενώ το 2011 στην Ινδία ζούσαν
-                    περισσότερα
-                    από 260 εκατ. εξαιρετικά φτωχοί. Σύμφωνα με την Παγκόσμια Τράπεζα, επιπλέον 100 εκατ. άτομα θα
-                    περάσουν
-                    το κατώφλι της φτώχειας αν δεν περιοριστεί η κλιματική αλλαγή.
+                <p id="p31">
+
 
             </div>
         </div>
@@ -225,62 +206,64 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">
-            <center>
-            <h3 style="font-weight:600">Στατιστικά & αριθμοί</h3>
-            </center>
+            <div style="text-align: center;">
+            <h3 id="footer_title" style="font-weight:600"></h3>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <center>
+            <div style="text-align: center;">
             <img src="../images/mass-icon-15.jpg" width="100px" height="100px" class="img-fluid">
-            <p >836 εκατομμύρια άνθρωποι ζουν ακόμα σε συνθήκες ακραίας φτώχειας
+            <p id="note1">
             </p>
-            </center>
+            </div>
         </div>
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <center>
+            <div style="text-align: center;">
             <img src="../images/1-in-5-people.png" width="100px" height="100px" class="img-fluid">
-            <p>Ένας στους πέντε ανθρώπους στις αναπτυσσόμενες περιοχές ζει με λιγότερο από 1,25 δολάρια την ημέρα
+            <p id="note2">
             </p>
-            </center>
+            </div>
         </div>
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <center>
+            <div style="text-align: center;">
             <img src="../images/no-money.jpg" width="100px" height="100px" class="img-fluid">
-            <p>Η συντριπτική πλειονότητα των ανθρώπων που ζουν με λιγότερο από 1,25 δολάρια την ημέρα ανήκουν σε δύο περιοχές: στη νότια Ασία και στην Υποσαχάρια Αφρική
+            <p id="note3">
             </p>
-            </center>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <center>
+            <div style="text-align: center;">
                 <img src="../images/war.png" width="100px" height="100px" class="img-fluid">
-                <p>Υψηλά ποσοστά της φτώχειας συχνά εμφανίζονται σε μικρές και ευάλωτες χώρες που πλήττονται από διαμάχες
+                <p id="note4">
                 </p>
-            </center>
+            </div>
         </div>
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <center>
+            <div style="text-align: center;">
                 <img src="../images/kids2.png" width="100px" height="100px" class="img-fluid">
-                <p>Ένα στα επτά παιδιά, ηλικίας κάτω των πέντε, στον κόσμο, έχουν χαμηλό ανάστημα αναλογικά με την ηλικία τους
+                <p id="note5">
                 </p>
-            </center>
+            </div>
         </div>
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <center>
+            <div style="text-align: center;">
                 <img src="../images/poverty.png" width="100px" height="100px" class="img-fluid">
-                <p>Το 2014 καθημερινά, 42,000 παιδιά αναγκάζονταν να εγκαταλείψουν τα σπίτια τους προς αναζήτηση προστασίας λόγω συγκρούσεων
+                <p id="note6">
 
                 </p>
-            </center>
+            </div>
         </div>
 
         <div class="col-6"></div>
     </div>
 
 </div>
+
+<script>checkLanguageText()</script>
 
 
 <!-- Footer -->

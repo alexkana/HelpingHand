@@ -130,10 +130,17 @@ border: 1em ;
     color: white;
 }
 
+.fa-google{
+    background: goldenrod;
+    color: white;
+}
+
 .fa-pinterest {
     background: rgba(203, 32, 39, 0.89);
     color: white;
 }
+
+
 
 .fa-phone{
     color: white;

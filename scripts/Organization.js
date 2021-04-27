@@ -1,14 +1,23 @@
 const LoadMoreButton = document.querySelector('.button');
-var i = 0;
+let i = 0;
 
 LoadMoreButton.addEventListener('click', e => {
     if (i === 0) {
-        LoadMoreButton.innerText = 'Show less';
+        if (sessionStorage.getItem('language') === 'en') {
+            LoadMoreButton.innerText = 'Show less';
+        } else {
+            LoadMoreButton.innerText = 'Εμφάνιση λιγότερων';
+        }
+
         document.getElementById("more").style.display = "inline";
         document.getElementById("dots").style.display = "none";
         i = 1;
     } else {
-        LoadMoreButton.innerText = 'Show more';
+        if (sessionStorage.getItem('language') === 'en') {
+            LoadMoreButton.innerText = 'Show more';
+        } else {
+            LoadMoreButton.innerText = 'Εμφάνιση περισσότερων';
+        }
         document.getElementById("more").style.display = "none";
         document.getElementById("dots").style.display = "inline";
         i = 0;
@@ -18,9 +27,16 @@ LoadMoreButton.addEventListener('click', e => {
 
 function checkLanguageText() {
     let text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15,
-        text16, text17;
+        text16, text17, text18;
 
     if (sessionStorage.getItem('language') === 'en') {
+
+        if (i === 0) {
+            text18 = 'Show more';
+        } else {
+            text18 = 'Show less';
+        }
+
         text1 = ' The Village Enterprise is an organizations that works to end extreme poverty in rural Africa through\n' +
             '                    entrepreneurship and innovation by implementing simple and cost-effective program. So far, the\n' +
             '                    Village\n' +
@@ -111,7 +127,15 @@ function checkLanguageText() {
             '                    the organization is “to provide those in need with opportunity, dignity, and hope so they can possess\n' +
             '                    the tools for change in themselves, their family, and their community”. WHI supports all people\n' +
             '                    regardless of ethnicity, gender, race, or religion.';
+
     } else {
+
+        if (i === 0) {
+            text18 = 'Εμφάνιση περισσότερων';
+        } else {
+            text18 = 'Εμφάνιση λιγότερων';
+        }
+
         text1 = 'Η Village Enterprise είναι ένας οργανισμός που εργάζεται για τον τερματισμό της ακραίας φτώχειας στην' +
             ' αγροτική Αφρική μέσω της επιχειρηματικότητας και της καινοτομίας, εφαρμόζοντας ένα απλό και οικονομικά' +
             ' αποδοτικό πρόγραμμα. Μέχρι στιγμής, η Village Enterprises έχει ξεκινήσει πάνω από 48.000 επιχειρήσεις και' +
@@ -222,6 +246,7 @@ function checkLanguageText() {
     document.getElementById("text15").innerHTML = text15;
     document.getElementById("text16").innerHTML = text16;
     document.getElementById("text17").innerHTML = text17;
+    document.getElementById("text18").innerHTML = text18;
 
 }
 

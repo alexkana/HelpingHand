@@ -1,5 +1,5 @@
 function checkLanguageText() {
-    let title_text, title_sub_text, title1, p11, p12, title2, p21, p22, title3, p31, footer_title, note1, note2, note3, note4, note5, note6
+    let title_text, title_sub_text, title1, p11, p12, title2, p21, p22, title3, p31, footer_title, note1, note2, note3, note4, note5, note6, btn_sec_title, btn_sec_1, btn_sec_p1, btn_sec_2, btn_sec_p2
 
     if(sessionStorage.getItem('language') === 'en'){
         title_text = "Our goal is to eradicate global poverty."
@@ -27,6 +27,13 @@ function checkLanguageText() {
         note4 = "High poverty rates often occur in small and vulnerable countries affected by conflict"
         note5 = "One in seven children under the age of five in the world are short in proportion to their age"
         note6 = "Every day in 2014, 42,000 children were forced to flee their homes in search of conflict protection"
+        btn_sec_title = "Together we can change the world!"
+        btn_sec_p1 = "Our site seeks to bring together remarkable people who share a common vision: the eradication of global poverty. Your contribution can help us create a fairer and better world, " +
+            "with equal opportunities for all. With a donation of your choice, you help our task to grow and provide more services to people in great need."
+        btn_sec_1 = "DONATE"
+        btn_sec_p2 = "We will be very happy for you to become a member of our team and to actively support our effort. You can easily take part in our action by registering on our website. By registering, you will receive constant updates about our work, " +
+            "you will have the opportunity to participate in a variety of volunteer activities and you will change for the better the lives of many people plagued by poverty."
+        btn_sec_2 = "SIGN-UP"
 
     }else{
         title_text = "Στόχος μας η εξάλειψη της παγκόσμιας φτώχειας."
@@ -56,6 +63,14 @@ function checkLanguageText() {
         note4 = "Υψηλά ποσοστά της φτώχειας συχνά εμφανίζονται σε μικρές και ευάλωτες χώρες που πλήττονται από διαμάχες"
         note5 = "Ένα στα επτά παιδιά, ηλικίας κάτω των πέντε, στον κόσμο, έχουν χαμηλό ανάστημα αναλογικά με την ηλικία τους"
         note6 = "Το 2014 καθημερινά, 42,000 παιδιά αναγκάζονταν να εγκαταλείψουν τα σπίτια τους προς αναζήτηση προστασίας λόγω συγκρούσεων"
+        btn_sec_title = "Όλοι μαζί μπορούμε να αλλάξουμε τη κατάσταση!"
+        btn_sec_p1 = "Ο ιστότοτοπος μας επιδιώκει την συσπείρωση αξιόλογων ανθρώπων που πρεσβεύουν ενα κοινό όραμα:την εξάλειψη της παγκόσμιας φτώχειας .Η συμβολή σας μπορεί να μας βοηθήσει να διαμορφώσουμε ένα δίκαιο και καλύτερο κόσμο," +
+            "με ίσες ευκαιρίες για όλους.Με μια δωρεά της επιλογής σας,βοηθάτε το έργο μας να ανελιχθεί και να παρέχει περισσότερες υπηρεσίες για άπορους ανθρώπους που έχουν μεγάλη ανάγκη."
+        btn_sec_1 = "ΔΩΡΕΑ"
+        btn_sec_p2 = "Θα χαρούμε πολύ να γίνετε μέλη της ομάδας μας και να στηρίξετε έμπρακτα τη προσπάθεια μας.Μπορείτε εύκολα να λάβετε μέρος στη δράση μας, με το να πραγματοποιήσετε εγγραφή στον ιστότοπο μας.Με την εγγραφή σας,θα λαμβάνετε συνεχείς ενημερώσεις σχετικά το έργο μας ," +
+            " θα έχετε την ευκαιρία να συμμετέχετε σε ποικίλες εθελοντικές δράσεις και θα αλλάξετε προς το καλύτερο τις ζωές πολλών ανθρώπων που μαστίζονται απο τη φτώχεια."
+        btn_sec_2 = "ΕΓΓΡΑΦΗ"
+
     }
     document.getElementById('title_text').innerHTML = title_text
     document.getElementById('title_sub_text').innerHTML = title_sub_text
@@ -74,4 +89,9 @@ function checkLanguageText() {
     document.getElementById('note4').innerHTML = note4
     document.getElementById('note5').innerHTML = note5
     document.getElementById('note6').innerHTML = note6
+    document.getElementById('btn_sec_title').innerHTML = btn_sec_title
+    document.getElementById('btn_sec_p1').innerHTML = btn_sec_p1
+    document.getElementById('btn_sec_1').innerHTML = btn_sec_1
+    document.getElementById('btn_sec_p2').innerHTML = btn_sec_p2
+    document.getElementById('btn_sec_2').innerHTML = btn_sec_2
 }

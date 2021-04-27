@@ -264,25 +264,23 @@
 
 </div>
 
-<script>checkLanguageText()</script>
-
 <hr class="my-4">
 
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">
-            <center>
-                <h3 style="font-weight:600">Όλοι μαζί μπορούμε να αλλάξουμε τη κατάσταση!</h3>
-            </center>
+            <div style="text-align: center;">
+                <h3 id="btn_sec_title" style="font-weight:600"></h3>
+            </div>
         </div>
         <div class="col-lg-12 col-md-12">
-            <center>
-                <p>Ο ιστότοτοπος μας επιδιώκει την συσπείρωση αξιόλογων ανθρώπων που πρεσβεύουν ενα κοινό όραμα:την εξάλειψη της παγκόσμιας φτώχειας .Η συμβολή σας μπορεί να μας βοηθήσει να διαμορφώσουμε ένα δίκαιο και καλύτερο κόσμο,με ίσες ευκαιρίες για όλους.Με μια δωρεά της επιλογής σας,βοηθάτε το έργο μας να ανελιχθεί και να παρέχει περισσότερες υπηρεσίες για άπορους ανθρώπους που έχουν μεγάλη ανάγκη. </p>
-                <button class="btn btn-3 btn-sep bi bi-heart">ΔΩΡΕΑ</button>
-                <p>Θα χαρούμε πολύ να γίνετε μέλη της ομάδας μας και να στηρίξετε έμπρακτα τη προσπάθεια μας.Μπορείτε εύκολα να λάβετε μέρος στη δράση μας, με το να πραγματοποιήσετε εγγραφή στον ιστότοπο μας.Με την εγγραφή σας,θα λαμβάνετε συνεχείς ενημερώσεις σχετικά το έργο μας , θα έχετε την ευκαιρία να συμμετέχετε σε ποικίλες εθελοντικές δράσεις και θα αλλάξετε προς το καλύτερο τις ζωές πολλών ανθρώπων που μαστίζονται απο τη φτώχεια. </p>
-                <button class="btn btn-3 btn-sep bi bi-heart">ΕΓΓΡΑΦΗ</button>
+            <div style="text-align: center;">
+                <p id="btn_sec_p1"></p>
+                <button id="btn_sec_1" onclick="location.href = 'Organization.html' " type="button" class="btn btn-3 btn-sep bi bi-heart"></button>
+                <p id="btn_sec_p2"> </p>
+                <button id="btn_sec_2" onclick="location.href = 'LoginPage.html' " type="button" class="btn btn-3 btn-sep bi bi-heart"></button>
 
-            </center>
+            </div>
         </div>
     </div>
 </div>
@@ -296,10 +294,7 @@
         <div class="row">
             <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <p style="color: whitesmoke">
-                    Υποστηρίξτε το έργο μας ακολουθώντας μας σε όλα τα social media.
-                    Ενημερωθήτε αμέσα για τις τρέχουσες δράσεις μας και μοιραστείτε τα νέα μας.
-
+                <p id="footer_msg" style="color: whitesmoke">
                 </p>
             </div>
             <!--Grid column-->
@@ -308,13 +303,13 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="https://www.facebook.com/Helping-Hand-110377947861394" class="fa fa-facebook"></a>
+                        <a href="https://www.facebook.com/Helping-Hand-110377947861394" target="_blank" class="fa fa-facebook"></a>
                     </li>
                     <li>
-                        <a href="#!" class="fa fa-twitter"></a>
+                        <a href="https://twitter.com/Helping86441471" target="_blank" class="fa fa-twitter"></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/helping_hand.auth/" class="fa fa-instagram"></a>
+                        <a href="https://www.instagram.com/helping_hand.auth/" target="_blank" class="fa fa-instagram"></a>
                     </li>
 
                 </ul>
@@ -325,7 +320,7 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!" class="fa fa-pinterest"></a>
+                        <a href="https://gr.pinterest.com/helpinghandauth/_saved/" target="_blank" class="fa fa-pinterest"></a>
                     </li>
                     <li>
                         <a href="#!" class="fa fa-google"></a>
@@ -349,19 +344,14 @@
     </div>
     <!-- Copyright -->
 </footer>
-<!-- Footer -->
 
-<!-- Optional JavaScript -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script>checkLanguageText(); trans_navbar();</script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
--->
 </body>
 
 </html>

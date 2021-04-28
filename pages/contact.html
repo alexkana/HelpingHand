@@ -17,6 +17,7 @@
     <link rel="icon" href="../images/logo.png">
     <!--Javascript File-->
     <script type="text/javascript" src="../scripts/script.js"></script>
+    <script src="../scripts/Contact.js"></script>
 
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
@@ -40,7 +41,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a id="item1" class="nav-link active" aria-current="page" href="mainpage.html">Αρχική
+                            <a id="item1" class="nav-link" aria-current="page" href="mainpage.html">Αρχική
                                 Σελίδα</a>
                         </li>
                         <li class="nav-item">
@@ -64,9 +65,11 @@
                                    href="#" class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                                 </a>
-                                <a onclick="sessionStorage.setItem('language','en');checkLanguageText(); trans_navbar()" href="#"
+                                <a onclick="sessionStorage.setItem('language','en');checkLanguageText(); trans_navbar()"
+                                   href="#"
                                    class="dropdown-item">
-                                    <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp English
+                                    <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
+                                    English
                                 </a>
                             </div>
                         </li>
@@ -74,6 +77,9 @@
                 </div>
             </div>
         </nav>
+        <script>
+            document.getElementById("item4").className = "nav-link active";
+        </script>
     </div>
 
 
@@ -95,7 +101,6 @@
 
     </section>
 
-    <script src="../scripts/Contact.js"></script>
 
 
     <script>
@@ -119,7 +124,8 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="https://www.facebook.com/Helping-Hand-110377947861394" target="_blank" class="fa fa-facebook"></a>
+                        <a href="https://www.facebook.com/Helping-Hand-110377947861394" target="_blank"
+                           class="fa fa-facebook"></a>
                     </li>
                     <li>
                         <a href="https://twitter.com/Helping86441471" target="_blank" class="fa fa-twitter"></a>
@@ -137,14 +143,16 @@
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="https://gr.pinterest.com/helpinghandauth/_saved/" target="_blank" class="fa fa-pinterest"></a>
+                        <a href="https://gr.pinterest.com/helpinghandauth/_saved/" target="_blank"
+                           class="fa fa-pinterest"></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/helping_hand.auth/" target="_blank" class="fa fa-instagram"></a>
+                        <a href="https://www.instagram.com/helping_hand.auth/" target="_blank"
+                           class="fa fa-instagram"></a>
                     </li>
                     <li>
                         <br>
-                        <a href="#!" class="fa fa-phone d-inline" > (+30) 6947483***</a>
+                        <a href="#!" class="fa fa-phone d-inline"> (+30) 6947483***</a>
                     </li>
                 </ul>
             </div>
@@ -162,7 +170,8 @@
     <!-- Copyright -->
 </footer>
 
-<script>checkLanguageText(); trans_navbar()</script>
+<script>checkLanguageText();
+trans_navbar()</script>
 
 <!-- Optional JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

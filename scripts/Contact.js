@@ -6,7 +6,7 @@ function checkLanguageText() {
 
     } else {
         text1 = "Κείμενο :";
-        text2 = "Αποστολή";
+        text2 = "Αποστολη";
 
     }
     document.getElementById("text1").innerHTML = text1;

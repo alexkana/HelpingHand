@@ -66,11 +66,13 @@
                                aria-haspopup="true" aria-expanded="false">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a onclick="sessionStorage.setItem('language','el'); trans_navbar()" href="#"
+                                <a onclick="sessionStorage.setItem('language','el');checkLanguageText(); trans_navbar()"
+                                   href="#"
                                    class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                                 </a>
-                                <a onclick="sessionStorage.setItem('language','en'); trans_navbar()" href="#"
+                                <a onclick="sessionStorage.setItem('language','en');checkLanguageText(); trans_navbar()"
+                                   href="#"
                                    class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
                                     English
@@ -85,45 +87,59 @@
 </section>
 
 <div class="container">
-        <style>
-            h1 {
-                text-align: center;
-            }
+    <style>
+        h1 {
+            text-align: center;
+        }
 
-            p {
-                text-align: center;
-            }
+        p {
+            text-align: center;
+        }
 
-            div {
-                text-align: center;
-            }
-        </style>
-        <div class="row">
-            <div class="col-md-6 col-lg-6">
-                <form>
-                <p>Κάνε εγγραφή συμπληρώνοντας τα παρακάτω στοιχεία!</p>
-                <p><input type="text" id="login1" class="fadeIn second" name="login" placeholder="Όνομα χρήστη"></p>
-                <p><input type="text" id="login2" class="fadeIn second" name="login" placeholder="Email"></p>
-                <p><input type="text" id="password1" class="fadeIn third" name="login" placeholder="Κωδικός πρόσβασης"></p>
-                <p><input type="text" id="password2" class="fadeIn third" name="login" placeholder="Επαλήθευση Κωδικού"></p>
-                <p><button type="button" class="btn btn-success">Εγγραφή</button></p>
+        div {
+            text-align: center;
+        }
+    </style>
+    <div class="row">
+        <div class="col-md-6 col-lg-6">
+            <form>
+                <p id="text1">Κάνε εγγραφή συμπληρώνοντας τα παρακάτω στοιχεία!</p>
+                <p><input type="text" id="login1" class="fadeIn second" name="login1" placeholder="Ονομα χρήστη"></p>
+                <p><input type="text" id="login2" class="fadeIn second" name="login2" placeholder="Email"></p>
+                <p><input type="text" id="password1" class="fadeIn third" name="password1"
+                          placeholder="Κωδικός πρόσβασης"></p>
+                <p><input type="text" id="password2" class="fadeIn third" name="password2"
+                          placeholder="Επαλήθευση Κωδικού"></p>
+                <p>
+                    <button type="button" class="btn btn-success" id="text2">Εγγραφή</button>
+                </p>
             </form>
-            </div>
-            <div class="col-md-6 col-lg-6">
-                <form>
-
-
-                    <p>Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς στον λογαριασμό σου!</p>
-                    <p><input type="text" id="login3" class="fadeIn second" name="login" placeholder="Email ή όνομα χρήστη"></p>
-                    <p><input type="text" id="password3" class="fadeIn third" name="login" placeholder="Κωδικός πρόσβασης"></p>
-                    <p><button type="button" class="btn btn-success">Σύνδεση</button></p>
-
-                    <div id="formFooter1">
-                        <a class="underlineHover" href="#">Ξέχασες τον Κωδικό σου?</a>
-                    </div>
-                </form>
-            </div>
         </div>
+        <div class="col-md-6 col-lg-6">
+            <form>
+
+
+                <p id="text3">Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς στον λογαριασμό σου!</p>
+                <p><input type="text" id="login3" class="fadeIn second" name="login3"
+                          placeholder="Email ή όνομα χρήστη"></p>
+                <p><input type="text" id="password3" class="fadeIn third" name="password3"
+                          placeholder="Κωδικός πρόσβασης"></p>
+                <p>
+                    <button type="button" class="btn btn-success" id="text4" name="text4">Σύνδεση</button>
+                </p>
+
+                <div id="formFooter1">
+                    <a class="underlineHover" href="#" id="text5" name="text5">Ξέχασες τον Κωδικό σου?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../scripts/LoginPage.js"></script>
+
+    <script>
+        checkLanguageText();
+    </script>
+
 </div>
 
 <footer class="bg-dark text-center text-lg-start">

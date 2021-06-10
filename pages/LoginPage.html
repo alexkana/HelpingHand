@@ -106,35 +106,35 @@
     </style>
     <div class="row">
         <div class="col-md-6 col-lg-6">
-            <form>
+            <form action="/newaccount" method=post
+                  oninput='p2.setCustomValidity(p2.value != p1.value ? "Passwords do not match." : "")'>  <!-- Checks if the password is the same as confirm password-->
+
                 <p id="text1"></p>
-                <p><input type="text" id="login1" class="fadeIn second" name="login1" placeholder="Ονομα χρήστη"></p>
-                <p><input type="text" id="login2" class="fadeIn second" name="login2" placeholder="Email"></p>
-                <p><input type="text" id="password1" class="fadeIn third" name="password1"
+                <p><input type="text" id="login1" class="fadeIn second"  required name="login1" placeholder="Ονομα χρήστη"></p>
+                <p><input type=email id="login2" class="fadeIn second" required name="login2" placeholder="Email"></p>
+
+                <p><input type=password id="password1" class="fadeIn third"  required name="p1"
                           placeholder="Κωδικός πρόσβασης"></p>
-                <p><input type="text" id="password2" class="fadeIn third" name="password2"
+                <p><input type=password id="password2" class="fadeIn third" required name="p2"
                           placeholder="Επαλήθευση Κωδικού"></p>
                 <p>
-                    <button type="button" class="btn btn-success" id="text2">Εγγραφή</button>
+                    <button type=submit class="btn btn-success" id="text2">Εγγραφή</button>
                 </p>
             </form>
         </div>
         <div class="col-md-6 col-lg-6">
-            <form>
-
-
+            <form action="/login" method=post>
                 <p id="text3">Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς στον λογαριασμό σου!</p>
-                <p><input type="text" id="login3" class="fadeIn second" name="login3"
+                <p><input type="text" id="login3" class="fadeIn second" required name="login3"
                           placeholder="Email ή όνομα χρήστη"></p>
-                <p><input type="text" id="password3" class="fadeIn third" name="password3"
+                <p><input type="text" id="password3" class="fadeIn third" required name="password3"
                           placeholder="Κωδικός πρόσβασης"></p>
                 <div id="formFooter1">
                     <a class="underlineHover" href="#" id="text5" name="text5">Ξέχασες τον Κωδικό σου?</a>
                 </div>
                 <p>
-                    <button type="button" class="btn btn-success" id="text4" name="text4">Σύνδεση</button>
+                    <button type=submit class="btn btn-success" id="text4" name="text4">Σύνδεση</button>
                 </p>
-
             </form>
         </div>
     </div>

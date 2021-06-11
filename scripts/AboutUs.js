@@ -78,5 +78,4 @@ function checkLanguageText() {
     document.getElementById("footer5").textContent = i5;
     document.getElementById("list_title").innerHTML = nav;
     document.getElementById("social").innerHTML = social;
-
 }

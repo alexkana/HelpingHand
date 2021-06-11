@@ -23,6 +23,7 @@ function checkLanguageText() {
         social = 'Κοινωνικά Δίκτυα'
 
     }
+
     document.getElementById("text1").innerHTML = text1;
     document.getElementById("text2").innerHTML = text2;
     document.getElementById("footer1").textContent = i1;

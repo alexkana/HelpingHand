@@ -86,6 +86,7 @@ function checkLanguageText() {
          social = 'Κοινωνικά Δίκτυα'
 
     }
+
     document.getElementById('title_text').innerHTML = title_text
     document.getElementById('title_sub_text').innerHTML = title_sub_text
     document.getElementById('title1').innerHTML = title1

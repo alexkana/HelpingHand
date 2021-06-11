@@ -19,11 +19,11 @@ function trans_navbar() {
         footer_msg = 'Υποστηρίξτε το έργο μας ακολουθώντας μας σε όλα τα social media. Ενημερωθήτε αμέσα για τις τρέχουσες δράσεις μας και μοιραστείτε τα νέα μας.'
         document.getElementById("lang_selector").innerHTML = "<img class=\"flag_icon\" src=\"../images/flag-icons/greece.png\" alt=\"\">&nbsp Ελληνικά"
     }
+
     document.getElementById("item1").innerHTML = i1;
     document.getElementById("item2").innerHTML = i2;
     document.getElementById("item3").innerHTML = i3;
     document.getElementById("item4").innerHTML = i4;
     document.getElementById("item5").innerHTML = i5;
-
     document.getElementById("footer_msg").innerHTML = footer_msg;
 }

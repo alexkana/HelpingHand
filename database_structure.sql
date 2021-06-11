@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016  */;
 USE `database_structure`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
@@ -77,7 +77,7 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-CREATE USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
 
 -- Dump completed on 2021-06-11 12:29:40

@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016  */;
 USE `database_structure`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
@@ -25,11 +25,11 @@ DROP TABLE IF EXISTS `emails`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `emails` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `from` varchar(30) NOT NULL,
-  `content` text,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `emails_id_uindex` (`id`)
+                          `id` int NOT NULL AUTO_INCREMENT,
+                          `from` varchar(30) NOT NULL,
+                          `content` text,
+                          PRIMARY KEY (`id`),
+                          UNIQUE KEY `emails_id_uindex` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,11 +50,11 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `name` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `about` text,
-  PRIMARY KEY (`name`),
-  UNIQUE KEY `USERS_name_uindex` (`name`)
+                         `name` varchar(20) NOT NULL,
+                         `password` varchar(20) NOT NULL,
+                         `about` text,
+                         PRIMARY KEY (`name`),
+                         UNIQUE KEY `USERS_name_uindex` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -77,7 +77,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-CREATE USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
-
--- Dump completed on 2021-06-11 12:29:40

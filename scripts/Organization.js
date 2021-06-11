@@ -27,7 +27,7 @@ LoadMoreButton.addEventListener('click', e => {
 
 function checkLanguageText() {
     let text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15,
-        text16, text17, text18;
+        text16, text17, text18,i1,i2,i3,i4,i5,nav,social;
 
     if (sessionStorage.getItem('language') === 'en') {
 
@@ -127,6 +127,13 @@ function checkLanguageText() {
             '                    the organization is “to provide those in need with opportunity, dignity, and hope so they can possess\n' +
             '                    the tools for change in themselves, their family, and their community”. WHI supports all people\n' +
             '                    regardless of ethnicity, gender, race, or religion.';
+            i1 = 'Home page'
+            i2 = 'About us'
+            i3 = 'Organizations'
+            i4 = 'Contact'
+            i5 = 'Sign-Up/Log-in'
+            nav = 'Navigation'
+            social ='Social Media'
 
     } else {
 
@@ -228,6 +235,13 @@ function checkLanguageText() {
             ' και της αδικίας. Το όραμα της οργάνωσης είναι «να παρέχει σε αυτούς που έχουν ανάγκη ευκαιρία, αξιοπρέπεια ' +
             'και ελπίδα, ώστε να μπορούν να διαθέτουν τα εργαλεία για αλλαγή στον εαυτό τους, στην οικογένειά τους και ' +
             'στην κοινότητά τους». Η WHI υποστηρίζει όλους τους ανθρώπους ανεξαρτήτως εθνικότητας, φύλου, φυλής ή θρησκείας.';
+         i1 = 'Αρχική Σελίδα'
+         i2 = 'Σχετικά με εμάς'
+         i3 = 'Οργανισμοί'
+         i4 = 'Επικοινωνία'
+         i5 = 'Εγγραφή/Σύνδεση'
+         nav = 'Πλοήγηση'
+         social = 'Κοινωνικά Δίκτυα'
     }
     document.getElementById("text1").innerHTML = text1;
     document.getElementById("text2").innerHTML = text2;
@@ -247,6 +261,13 @@ function checkLanguageText() {
     document.getElementById("text16").innerHTML = text16;
     document.getElementById("text17").innerHTML = text17;
     document.getElementById("text18").innerHTML = text18;
+    document.getElementById("footer1").textContent = i1;
+    document.getElementById("footer2").textContent = i2;
+    document.getElementById("footer3").textContent = i3;
+    document.getElementById("footer4").textContent = i4;
+    document.getElementById("footer5").textContent = i5;
+    document.getElementById("list_title").innerHTML = nav;
+    document.getElementById("social").innerHTML = social;
 
 }
 

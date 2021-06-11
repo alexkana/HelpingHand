@@ -1,5 +1,5 @@
 function checkLanguageText() {
-    let title_text, title_sub_text, title1, p11, p12, title2, p21, p22, title3, p31, footer_title, note1, note2, note3, note4, note5, note6, btn_sec_title, btn_sec_1, btn_sec_p1, btn_sec_2, btn_sec_p2
+    let title_text, title_sub_text, title1, p11, p12, title2, p21, p22, title3, p31, footer_title, note1, note2, note3, note4, note5, note6, btn_sec_title, btn_sec_1, btn_sec_p1, btn_sec_2, btn_sec_p2,i1,i2,i3,i4,i5,nav,social
 
     if(sessionStorage.getItem('language') === 'en'){
         title_text = "Our goal is to eradicate global poverty."
@@ -34,6 +34,13 @@ function checkLanguageText() {
         btn_sec_p2 = "We will be very happy for you to become a member of our team and to actively support our effort. You can easily take part in our action by registering on our website. By registering, you will receive constant updates about our work, " +
             "you will have the opportunity to participate in a variety of volunteer activities and you will change for the better the lives of many people plagued by poverty."
         btn_sec_2 = "SIGN-UP"
+         i1 = 'Home page'
+         i2 = 'About us'
+         i3 = 'Organizations'
+         i4 = 'Contact'
+         i5 = 'Sign-Up/Log-in'
+         nav = 'Navigation'
+         social ='Social Media'
 
     }else{
         title_text = "Στόχος μας η εξάλειψη της παγκόσμιας φτώχειας."
@@ -70,6 +77,13 @@ function checkLanguageText() {
         btn_sec_p2 = "Θα χαρούμε πολύ να γίνετε μέλη της ομάδας μας και να στηρίξετε έμπρακτα τη προσπάθεια μας.Μπορείτε εύκολα να λάβετε μέρος στη δράση μας, με το να πραγματοποιήσετε εγγραφή στον ιστότοπο μας.Με την εγγραφή σας,θα λαμβάνετε συνεχείς ενημερώσεις σχετικά το έργο μας ," +
             " θα έχετε την ευκαιρία να συμμετέχετε σε ποικίλες εθελοντικές δράσεις και θα αλλάξετε προς το καλύτερο τις ζωές πολλών ανθρώπων που μαστίζονται απο τη φτώχεια."
         btn_sec_2 = "ΕΓΓΡΑΦΗ"
+         i1 = 'Αρχική Σελίδα'
+         i2 = 'Σχετικά με εμάς'
+         i3 = 'Οργανισμοί'
+         i4 = 'Επικοινωνία'
+         i5 = 'Εγγραφή/Σύνδεση'
+         nav = 'Πλοήγηση'
+         social = 'Κοινωνικά Δίκτυα'
 
     }
     document.getElementById('title_text').innerHTML = title_text
@@ -94,4 +108,11 @@ function checkLanguageText() {
     document.getElementById('btn_sec_1').innerHTML = btn_sec_1
     document.getElementById('btn_sec_p2').innerHTML = btn_sec_p2
     document.getElementById('btn_sec_2').innerHTML = btn_sec_2
+    document.getElementById("footer1").textContent = i1;
+    document.getElementById("footer2").textContent = i2;
+    document.getElementById("footer3").textContent = i3;
+    document.getElementById("footer4").textContent = i4;
+    document.getElementById("footer5").textContent = i5;
+    document.getElementById("list_title").innerHTML = nav;
+    document.getElementById("social").innerHTML = social;
 }

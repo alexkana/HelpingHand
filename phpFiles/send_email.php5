@@ -8,5 +8,5 @@ if ($conn->query($sql_query) === false) {
     echo "Error: " . $sql_query . "<br>" . $conn->error;
 }
 $conn->close();
-header("Location: contact.html");
+header("Location: ../pages/contact.html");
 exit;

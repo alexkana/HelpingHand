@@ -106,7 +106,7 @@
     </style>
     <div class="row">
         <div class="col-md-6 col-lg-6">
-            <form action="/newaccount" method=post
+            <form action="../phpFiles/signUp.php5" method=post
                   oninput='p2.setCustomValidity(p2.value != p1.value ? "Passwords do not match." : "")'>  <!-- Checks if the password is the same as confirm password-->
 
                 <p id="text1"></p>
@@ -123,7 +123,8 @@
             </form>
         </div>
         <div class="col-md-6 col-lg-6">
-            <form action="/login" method=post>
+
+            <form action="../phpFiles/login.php5" method=post>
                 <p id="text3">Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς στον λογαριασμό σου!</p>
                 <p><input type="text" id="login3" class="fadeIn second" required name="login3"
                           placeholder="Email ή όνομα χρήστη"></p>

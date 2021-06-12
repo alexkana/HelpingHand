@@ -13,9 +13,4 @@ if ($conn->connect_error) {
     exit();
 }
 
-//$sql_query = "INSERT INTO emails (`from`, content) VALUES ('Test','Shit');";
-//$conn->query($sql_query);
-//$conn->close();
-
-
 

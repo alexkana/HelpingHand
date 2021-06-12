@@ -64,11 +64,11 @@
                                aria-haspopup="true" aria-expanded="false">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a onclick="sessionStorage.setItem('language','el'); trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','el');location.reload(); ;trans_navbar()"
                                    href="#" class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                                 </a>
-                                <a onclick="sessionStorage.setItem('language','en'); trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','en');location.reload();; trans_navbar()"
                                    href="#"
                                    class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
@@ -86,6 +86,8 @@
     </div>
 
 </section>
+
+
 
 
 <?php
@@ -111,10 +113,14 @@ if ($conn->connect_error) {
             $title =  $row["title"];
             $imgSource = $row['imagePath'];
             $description_Greek  = $row['description_GR'];
-            $description_EN  = $row['description_EN'];
+            $description_English  = $row['description_EN'];
             $url = $row['url'];
+            $lan = 0;
 
             echo ' <hr class="my-4">
+ 
+ 
+ 
 
     <div class="container-fluid padding">
         <div class="row padding">
@@ -131,8 +137,19 @@ if ($conn->connect_error) {
                     <h1>
                         <a target="_blank" href="'.$url.'" style="color: #eb3349">'.$title.'</a>
                     </h1>
+                    
+              
+                    <script >
 
-                    <p> '.$description_Greek.'</p>
+
+
+                        if (sessionStorage.getItem("language") === "en") {                   
+                           document.write( "'.$description_English.'");
+                        }else{
+                          document.write( "'.$description_Greek.'");   
+                        }
+                    </script>
+                    
                 </div>
             </div>
         </div>
@@ -147,7 +164,6 @@ if ($conn->connect_error) {
 
 
 ?>
-
 
 
 <!-- Footer -->

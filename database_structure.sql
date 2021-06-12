@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016  */;
+CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
 USE `database_structure`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
@@ -30,17 +30,8 @@ CREATE TABLE `emails` (
                           `content` text,
                           PRIMARY KEY (`id`),
                           UNIQUE KEY `emails_id_uindex` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `emails`
---
-
-LOCK TABLES `emails` WRITE;
-/*!40000 ALTER TABLE `emails` DISABLE KEYS */;
-/*!40000 ALTER TABLE `emails` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -53,20 +44,12 @@ CREATE TABLE `users` (
                          `name` varchar(20) NOT NULL,
                          `password` varchar(20) NOT NULL,
                          `about` text,
+                         `email` varchar(30) NOT NULL,
                          PRIMARY KEY (`name`),
-                         UNIQUE KEY `USERS_name_uindex` (`name`)
+                         UNIQUE KEY `USERS_name_uindex` (`name`),
+                         UNIQUE KEY `users_email_uindex` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('admin','1234',NULL);
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -77,5 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
-GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
+-- Dump completed on 2021-06-12 16:24:10

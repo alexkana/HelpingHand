@@ -11,5 +11,5 @@ if ($conn->query($sql_query) === false) {
     echo "Error: " . $sql_query . "<br>" . $conn->error;
 }
 $conn->close();
-//header("Location: ../pages/LoginPage.html");
+header("Location: ../pages/LoginPage.html");
 exit;

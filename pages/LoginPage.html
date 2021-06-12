@@ -107,7 +107,7 @@
     <div class="row">
         <div class="col-md-6 col-lg-6">
             <form action="../phpFiles/signUp.php5" method=post
-                  oninput='p2.setCustomValidity(p2.value != p1.value ? "Passwords do not match." : "")'>  <!-- Checks if the password is the same as confirm password-->
+                  oninput='password2.setCustomValidity(password2.value != password1.value ? "Passwords do not match." : "")'>  <!-- Checks if the password is the same as confirm password-->
 
                 <p id="text1"></p>
                 <p><input type="text" id="login1" class="fadeIn second"  required name="login1" placeholder="Ονομα χρήστη"></p>

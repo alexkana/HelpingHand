@@ -55,5 +55,4 @@ function checkLanguageText() {
     document.getElementById("social").innerHTML = social;
 
 
-
 }

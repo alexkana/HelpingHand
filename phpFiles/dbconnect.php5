@@ -2,7 +2,7 @@
 $host = "localhost";
 $db = "database_structure";
 $user = "root";
-$password = "";
+$password = "christos";
 $charset = 'utf8mb4';
 
 $conn = new mysqli($host, $user, $password, $db);

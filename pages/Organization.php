@@ -57,7 +57,7 @@
                             <a id="item4" class="nav-link" href="contact.html">Επικοινωνία</a>
                         </li>
                         <li class="nav-item">
-                            <a id="item5" class="nav-link" href="LoginPage.html">Εγγραφή/Σύνδεση</a>
+                            <a id="item5" class="nav-link" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
@@ -94,7 +94,7 @@
 $host = "localhost";
 $db = "database_structure";
 $user = "root";
-$password = "christos";
+$password = "";
 $charset = 'utf8mb4';
 
 $conn = new mysqli($host, $user, $password, $db);
@@ -199,7 +199,7 @@ if ($conn->connect_error) {
                             <a id="footer4" style="color:whitesmoke" href="contact.html">Επικοινωνία</a>
                         </li>
                         <li class="footerlinks">
-                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.html">Εγγραφή/Σύνδεση</a>
+                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
                         </li>
 
                     </ul>

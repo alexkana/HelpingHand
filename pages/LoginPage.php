@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+if (isset($_POST['login1'])) {
+    global $conn;
+    include("../phpFiles/dbconnect.php5");
+    $username = $_POST['login1'];
+    $email = $_POST['login2'];
+    $password = $_POST['password1'];
+    if ($email == null or $username == null)
+        exit();
+    $sql_query = "INSERT INTO users (name,password,email) VALUES ('$username','$password','$email');";
+    if ($conn->query($sql_query) == false) {
+        $_SESSION['sign_up_error'] = '<p style="color:red;" >A user with this name or email already exists!</p>';
+    } else {
+        unset($_SESSION['sign_up_error']);
+    }
+    $conn->close();
+    session_write_close();
+    header("Location: ../pages/LoginPage.php");
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -59,7 +83,7 @@
                             <a id="item4" class="nav-link" href="contact.html">Επικοινωνία</a>
                         </li>
                         <li class="nav-item">
-                            <a id="item5" class="nav-link" href="LoginPage.html">Εγγραφή/Σύνδεση</a>
+                            <a id="item5" class="nav-link" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
@@ -106,14 +130,16 @@
     </style>
     <div class="row">
         <div class="col-md-6 col-lg-6">
-            <form action="../phpFiles/signUp.php5" method=post
-                  oninput='password2.setCustomValidity(password2.value !== password1.value ? "Passwords do not match." : "")'>  <!-- Checks if the password is the same as confirm password-->
 
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method=post
+                  oninput='password2.setCustomValidity(password2.value !== password1.value ? "Passwords do not match." : "")'>
+                <!-- Checks if the password is the same as confirm password-->
                 <p id="text1"></p>
-                <p><input type="text" id="login1" class="fadeIn second"  required name="login1" placeholder="Ονομα χρήστη"></p>
+                <p><input type="text" id="login1" class="fadeIn second" required name="login1"
+                          placeholder="Ονομα χρήστη"></p>
                 <p><input type=email id="login2" class="fadeIn second" required name="login2" placeholder="Email"></p>
 
-                <p><input type=password id="password1" class="fadeIn third"  required name="password1"
+                <p><input type=password id="password1" class="fadeIn third" required name="password1"
                           placeholder="Κωδικός πρόσβασης"></p>
                 <p><input type=password id="password2" class="fadeIn third" required name="password2"
                           placeholder="Επαλήθευση Κωδικού"></p>
@@ -121,6 +147,12 @@
                     <button type=submit class="btn btn-success" id="text2">Εγγραφή</button>
                 </p>
             </form>
+            <?php
+            if (isset($_SESSION['sign_up_error'])) {
+                echo $_SESSION['sign_up_error'];
+                unset($_SESSION['sign_up_error']);
+            }
+            ?>
         </div>
         <div class="col-md-6 col-lg-6">
             <form action="../phpFiles/login.php5" method=post>
@@ -150,7 +182,7 @@
             <!--Grid column-->
             <div class="col-lg-6 col-md-4 mb-4 mb-md-0">
                 <p id="footer_msg" style="color: whitesmoke"></p>
-                <p class="fa fa-phone d-inline" > (+30) 6947483***</p>
+                <p class="fa fa-phone d-inline"> (+30) 6947483***</p>
             </div>
             <!--Grid column-->
             <!--Grid column-->
@@ -158,13 +190,13 @@
                 <center>
                     <ul class="list-unstyled">
                         <li class="footerlinks">
-                            <p id="list_title" style="color:whitesmoke" >Πλοήγηση</p>
+                            <p id="list_title" style="color:whitesmoke">Πλοήγηση</p>
                         </li>
                         <li class="footerlinks">
-                            <a id ="footer1"  style="color:whitesmoke" href="mainpage.html">Αρχική Σελίδα</a>
+                            <a id="footer1" style="color:whitesmoke" href="mainpage.html">Αρχική Σελίδα</a>
                         </li>
                         <li class="footerlinks">
-                            <a id ="footer2" style="color:whitesmoke" href="AboutUs.html">Σχετικά με εμάς</a>
+                            <a id="footer2" style="color:whitesmoke" href="AboutUs.html">Σχετικά με εμάς</a>
                         </li>
 
                         <li class="footerlinks">
@@ -174,7 +206,7 @@
                             <a id="footer4" style="color:whitesmoke" href="contact.html">Επικοινωνία</a>
                         </li>
                         <li class="footerlinks">
-                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.html">Εγγραφή/Σύνδεση</a>
+                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
                         </li>
                     </ul>
                 </center>
@@ -188,16 +220,19 @@
                             <p id="social" style="color: whitesmoke">Κοινωνικά Δίκτυα</p>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/Helping-Hand-110377947861394" target="_blank" class="fa fa-facebook"></a>
+                            <a href="https://www.facebook.com/Helping-Hand-110377947861394" target="_blank"
+                               class="fa fa-facebook"></a>
                         </li>
                         <li>
                             <a href="https://twitter.com/Helping86441471" target="_blank" class="fa fa-twitter"></a>
                         </li>
                         <li>
-                            <a href="https://gr.pinterest.com/helpinghandauth/_saved/" target="_blank" class="fa fa-pinterest"></a>
+                            <a href="https://gr.pinterest.com/helpinghandauth/_saved/" target="_blank"
+                               class="fa fa-pinterest"></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/helping_hand.auth/" target="_blank" class="fa fa-instagram"></a>
+                            <a href="https://www.instagram.com/helping_hand.auth/" target="_blank"
+                               class="fa fa-instagram"></a>
                         </li>
 
                     </ul>
@@ -226,8 +261,8 @@
         crossorigin="anonymous"></script>
 
 <script>
-checkLanguageText();
-trans_navbar();</script>
+    checkLanguageText();
+    trans_navbar();</script>
 
 </body>
 </html>

@@ -57,18 +57,18 @@
                             <a id="item4" class="nav-link" href="contact.html">Επικοινωνία</a>
                         </li>
                         <li class="nav-item">
-                            <a id="item5" class="nav-link" href="LoginPage.html">Εγγραφή/Σύνδεση</a>
+                            <a id="item5" class="nav-link" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a onclick="sessionStorage.setItem('language','el');location.reload(); ;trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','el');location.reload();trans_navbar()"
                                    href="#" class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                                 </a>
-                                <a onclick="sessionStorage.setItem('language','en');location.reload();; trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','en');location.reload(); trans_navbar()"
                                    href="#"
                                    class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
@@ -94,7 +94,7 @@
 $host = "localhost";
 $db = "database_structure";
 $user = "root";
-$password = "christos";
+$password = "";
 $charset = 'utf8mb4';
 
 $conn = new mysqli($host, $user, $password, $db);
@@ -199,7 +199,7 @@ if ($conn->connect_error) {
                             <a id="footer4" style="color:whitesmoke" href="contact.html">Επικοινωνία</a>
                         </li>
                         <li class="footerlinks">
-                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.html">Εγγραφή/Σύνδεση</a>
+                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
                         </li>
 
                     </ul>

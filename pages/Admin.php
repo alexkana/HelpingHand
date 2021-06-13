@@ -128,8 +128,8 @@ session_start();
                         <?php
                         $host = "localhost";
                         $db = "database_structure";
-                        $user = "root";
-                        $password = "";
+                        $user = "app";
+                        $password = "1234";
                         $charset = 'utf8mb4';
 
                         $conn = new mysqli($host, $user, $password, $db);
@@ -188,8 +188,8 @@ session_start();
                         <?php
                         $host = "localhost";
                         $db = "database_structure";
-                        $user = "root";
-                        $password = "";
+                        $user = "app";
+                        $password = "1234";
                         $charset = 'utf8mb4';
 
                         $conn = new mysqli($host, $user, $password, $db);

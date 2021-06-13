@@ -5,7 +5,7 @@ $email = $_POST["user_email"];
 $text = $_POST["message"];
 if($email == null or $text == null)
     exit();
-$sql_query = "INSERT INTO emails (`from`, content) VALUES ('$email','$text');";
+$sql_query = "INSERT INTO emails (sender, content) VALUES ('$email','$text');";
 if ($conn->query($sql_query) === false) {
     echo "Error: " . $sql_query . "<br>" . $conn->error;
 }

@@ -64,11 +64,11 @@
                                aria-haspopup="true" aria-expanded="false">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a onclick="sessionStorage.setItem('language','el');location.reload(); ;trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','el');location.reload();trans_navbar()"
                                    href="#" class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                                 </a>
-                                <a onclick="sessionStorage.setItem('language','en');location.reload();; trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','en');location.reload(); trans_navbar()"
                                    href="#"
                                    class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp

@@ -14,6 +14,13 @@ if (isset($_POST['login1'])) {
         $_SESSION['sign_up_error'] = '<p style="color:red;" >A user with this name or email already exists!</p>';
     } else {
         $_SESSION['sign_up_error'] = '<p>Account created &#9989;</p>';
+
+        unset($_SESSION['login_error']);
+
+        $conn->close();
+        session_write_close();
+        header("Location: ../pages/mainpage.html");
+        exit;
     }
     $conn->close();
     session_write_close();
@@ -34,7 +41,12 @@ if(isset($_POST['login3'])){
         $_SESSION['password'] = $record['password'];
         $_SESSION['email'] = $record['email'];
         $_SESSION['about'] = $record['about'];
-        header("Location: ../pages/Admin.php");
+        if($_SESSION['username'] == 'admin'){
+            header("Location: ../pages/Admin.php");
+        }else{
+            header("Location: ../pages/mainpage.html");
+        }
+
         exit;
     }else{
         $_SESSION['login_error'] = '<p style="color:red;" >Invalid username or password</p>';

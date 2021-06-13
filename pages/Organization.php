@@ -64,11 +64,11 @@
                                aria-haspopup="true" aria-expanded="false">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a onclick="sessionStorage.setItem('language','el');checkLanguageText(); trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','el');location.reload(); ;trans_navbar()"
                                    href="#" class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
                                 </a>
-                                <a onclick="sessionStorage.setItem('language','en');checkLanguageText(); trans_navbar()"
+                                <a onclick="sessionStorage.setItem('language','en');location.reload();; trans_navbar()"
                                    href="#"
                                    class="dropdown-item">
                                     <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
@@ -87,6 +87,9 @@
 
 </section>
 
+
+
+
 <?php
 $host = "localhost";
 $db = "database_structure";
@@ -103,24 +106,26 @@ if ($conn->connect_error) {
     $sql = "SELECT * FROM organizationdata";
     $result = $conn->query($sql);
 
-    echo "This is a text baby!";
-
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
             $id =  $row["id"];
             $title =  $row["title"];
             $imgSource = $row['imagePath'];
-            $description_Greek  = $row['description_Gr'];
-            $description_EN  = $row['description_EN'];
+            $description_Greek  = $row['description_GR'];
+            $description_English  = $row['description_EN'];
             $url = $row['url'];
+            $lan = 0;
 
             echo ' <hr class="my-4">
+ 
+ 
+ 
 
     <div class="container-fluid padding">
         <div class="row padding">
             <div class="col-md-6  text-md-left text-center">
-                <a target="_blank" href="https://trickleup.org/">
+                <a target="_blank" href="'.$url.'">
                     <img alt="Qries" src="'.$imgSource.'"
                          style="width: 0.1vw; min-width: 330px;"
                          class="img-fluid">
@@ -130,17 +135,27 @@ if ($conn->connect_error) {
                 <div class="text">
 
                     <h1>
-                        <a target="_blank" href="https://trickleup.org/" style="color: #eb3349">Trickle Up</a>
+                        <a target="_blank" href="'.$url.'" style="color: #eb3349">'.$title.'</a>
                     </h1>
+                    
+              
+                    <script >
 
-                    <p id="text2"></p>
+
+
+                        if (sessionStorage.getItem("language") === "en") {                   
+                           document.write( "'.$description_English.'");
+                        }else{
+                          document.write( "'.$description_Greek.'");   
+                        }
+                    </script>
+                    
                 </div>
             </div>
         </div>
     </div>';
 
 
-            //echo "id: " . $row["id"]. " - title: " . $row["title"]. " imagePath : " . $row["imagePath"]. "<br>";
         }
     } else {
         echo "0 results";
@@ -151,434 +166,6 @@ if ($conn->connect_error) {
 ?>
 
 
-
-
-<!--
-
-<div class="container-fluid padding">
-    <hr class="my-4">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="https://villageenterprise.org/">
-                <img alt="Qries" src="../images/OrganizationImages/Village_enterprise.png"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-                <h1>
-                    <a target="_blank" href="https://villageenterprise.org/" style="color: #eb3349">Village
-                        Enterprise</a>
-                </h1>
-                <p id="text1"></p>
-            </div>
-        </div>
-    </div>
-    <hr class="my-4">
-
-    <div class="container-fluid padding">
-        <div class="row padding">
-            <div class="col-md-6  text-md-left text-center">
-                <a target="_blank" href="https://trickleup.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/Trickle_Up.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-            </div>
-            <div class="col-md-6 text-md-right text-center ">
-                <div class="text">
-
-                    <h1>
-                        <a target="_blank" href="https://trickleup.org/" style="color: #eb3349">Trickle Up</a>
-                    </h1>
-
-                    <p id="text2"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr class="my-4">
-
-    <div class="container-fluid padding">
-        <div class="row padding">
-            <div class="col-md-6  text-md-left text-center">
-                <a target="_blank" href="https://www.globalcitizen.org/en/">
-                    <img alt="Qries" src="../images/OrganizationImages/Global_Citizen.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-            </div>
-            <div class="col-md-6 text-md-right text-center ">
-                <div class="text">
-
-                    <h1>
-                        <a target="_blank" href="https://www.globalcitizen.org/en/" style="color: #eb3349">Global
-                            Citizen</a>
-                    </h1>
-
-                    <p id="text3"></p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="https://www.poverty-action.org/">
-                <img alt="Qries" src="../images/OrganizationImages/IPA.jpg"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://www.poverty-action.org/" style="color: #eb3349">IPA</a>
-                </h1>
-
-                <p id="text4"></p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-
-
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="http://www.brac.net/">
-                <img alt="Qries" src="../images/OrganizationImages/brac.png"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="http://www.brac.net/" style="color: #eb3349">brac</a>
-                </h1>
-
-                <p id="text5"></p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="https://www.eapn.eu/">
-                <img alt="Qries" src="../images/OrganizationImages/EAPN.jpg"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://www.eapn.eu/" style="color: #eb3349">EAPN</a>
-                </h1>
-
-                <p id="text6"></p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="https://hope-charity.org/">
-                <img alt="Qries" src="../images/OrganizationImages/HOPE.jpeg"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://hope-charity.org/" style="color: #eb3349">HOPE</a>
-                </h1>
-
-                <p id="text7"></p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="https://www.oxfam.org/en">
-                <img alt="Qries" src="../images/OrganizationImages/Oxfam_International.png"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://www.oxfam.org/en" style="color: #eb3349">Oxfam International</a>
-                </h1>
-
-                <p id="text8"></p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-
-
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-            <a target="_blank" href="https://www.concern.net/">
-                <img alt="Qries" src="../images/OrganizationImages/Concern_Worldwide.png"
-                     style="width: 0.1vw; min-width: 330px;"
-                     class="img-fluid">
-            </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://www.concern.net/" style="color: #eb3349">Concern Worldwide</a>
-                </h1>
-
-                <p id="text9"></p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<hr class="my-4">
-<
-<span id="dots">    </span>
-<span class="moreText" id="more">
-
-     <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-             <a target="_blank" href="https://www.opadint.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/opad.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a href="https://www.opadint.org/" style="color: #eb3349">Opad</a>
-                </h1>
-
-                <p id="text10"></p>
-
-            </div>
-        </div>
-      </div>
-      </div>
-      <hr class="my-4">
-
-
-     <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-              <a target="_blank" href="https://worldrelief.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/world_relief.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-            <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://worldrelief.org/" style="color: #eb3349">World relief</a>
-                </h1>
-
-                <p id="text11"></p>
-
-            </div>
-        </div>
-      </div>
-      </div>
-        <hr class="my-4">
-
-
-     <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-              <a target="_blank" href="https://www.care-international.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/Care.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-             <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://www.care-international.org/" style="color: #eb3349">Care International</a>
-                </h1>
-
-                <p id="text12"></p>
-
-            </div>
-        </div>
-      </div>
-      </div>
-      <hr class="my-4">
-
-
-      <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-               <a target="_blank" href="https://muslimhands.org.uk/give-hope-this-ramadan">
-                    <img alt="Qries" src="../images/OrganizationImages/Muslim_Hands.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-             <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://muslimhands.org.uk/give-hope-this-ramadan" style="color: #eb3349">Muslim Hands</a>
-                </h1>
-
-                <p id="text13"></p>
-
-            </div>
-        </div>
-      </div>
-      </div>
-      <hr class="my-4">
-
-
-     <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-               <a target="_blank" href="https://greenshootsfoundation.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/Green_Shoots.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-              <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://greenshootsfoundation.org/" style="color: #eb3349">Green Shoots</a>
-                </h1>
-
-                <p id="text14"></p>
-
-            </div>
-        </div>
-      </div>
-      </div>
-      <hr class="my-4">
-
-
-    <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-              <a target="_blank" href="http://www.internationalchildcare.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/Grace.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-                <div class="text">
-
-                <h1>
-                    <a target="_blank" href="http://www.internationalchildcare.org/" style="color: #eb3349">International Child Care</a>
-                </h1>
-
-                <p id="text15"></div>
-
-        </div>
-        </div>
-      </div>
-        <hr class="my-4">
-
-
-     <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-              <a target="_blank" href="https://www.worldvision.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/World_Vision.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-                <div class="text">
-
-                <h1>
-                    <a target="_blank" href="https://www.worldvision.org/" style="color: #eb3349">World Vision</a>
-                </h1>
-
-                <p id="text16"></div>
-
-        </div>
-        </div>
-      </div>
-       <hr class="my-4">
-
-
-     <div class="container-fluid padding">
-     <div class="row padding">
-        <div class="col-md-6  text-md-left text-center">
-               <a target="_blank" href="https://www.worldhope.org/">
-                    <img alt="Qries" src="../images/OrganizationImages/Word_Hope.png"
-                         style="width: 0.1vw; min-width: 330px;"
-                         class="img-fluid">
-                </a>
-        </div>
-        <div class="col-md-6 text-md-right text-center ">
-                <div class="text">
-                <h1>
-                    <a target="_blank" href="https://www.worldhope.org/"
-                       style="color: #eb3349">World Hope International</a>
-                </h1>
-
-                <p id="text17"></div>
-
-        </div>
-        </div>
-      </div>
-      <hr class="my-4">
-
-
-    </span>
-<div class="wrapper">
-    <div class="btn ">
-        <button class="button button_bot" id="text18"></button>
-    </div>
-</div>
--->
 <!-- Footer -->
 <footer class="bg-dark text-center text-lg-start">
     <!-- Grid container -->
@@ -661,17 +248,11 @@ if ($conn->connect_error) {
     <!-- Copyright -->
 </footer>
 
-<script src="../scripts/Organization.js"></script>
-
-<script>
-    checkLanguageText();
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
-<script>checkLanguageText();
-trans_navbar();</script>
+<script>trans_navbar();</script>
 
 </body>
 </html>

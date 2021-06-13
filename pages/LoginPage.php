@@ -13,10 +13,32 @@ if (isset($_POST['login1'])) {
     if ($conn->query($sql_query) == false) {
         $_SESSION['sign_up_error'] = '<p style="color:red;" >A user with this name or email already exists!</p>';
     } else {
-        unset($_SESSION['sign_up_error']);
+        $_SESSION['sign_up_error'] = '<p>Account created &#9989;</p>';
     }
     $conn->close();
     session_write_close();
+    header("Location: ../pages/LoginPage.php");
+    exit;
+}
+if(isset($_POST['login3'])){
+    global $conn;
+    include("../phpFiles/dbconnect.php5");
+    $username = $_POST['login3'];
+    $password = $_POST['password3'];
+    $sql_query = "SELECT name,password,email,about FROM users WHERE name = '$username' AND password = '$password'";
+    $res = $conn->query($sql_query);
+    if(!empty($res) && $res->num_rows > 0) {
+        unset($_SESSION['login_error']);
+        $record = $res->fetch_assoc();
+        $_SESSION['username'] = $record['name'];
+        $_SESSION['password'] = $record['password'];
+        $_SESSION['email'] = $record['email'];
+        $_SESSION['about'] = $record['about'];
+        header("Location: ../pages/Admin.php");
+        exit;
+    }else{
+        $_SESSION['login_error'] = '<p style="color:red;" >Invalid username or password</p>';
+    }
     header("Location: ../pages/LoginPage.php");
     exit;
 }
@@ -150,16 +172,16 @@ if (isset($_POST['login1'])) {
             <?php
             if (isset($_SESSION['sign_up_error'])) {
                 echo $_SESSION['sign_up_error'];
-                unset($_SESSION['sign_up_error']);
             }
+            unset($_SESSION['sign_up_error']);
             ?>
         </div>
         <div class="col-md-6 col-lg-6">
-            <form action="../phpFiles/login.php5" method=post>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method=post>
                 <p id="text3">Συμπλήρωσε τα παρακάτω στοιχεία για να συνδεθείς στον λογαριασμό σου!</p>
                 <p><input type="text" id="login3" class="fadeIn second" required name="login3"
                           placeholder="Email ή όνομα χρήστη"></p>
-                <p><input type="text" id="password3" class="fadeIn third" required name="password3"
+                <p><input type="password" id="password3" class="fadeIn third" required name="password3"
                           placeholder="Κωδικός πρόσβασης"></p>
                 <div id="formFooter1">
                     <a class="underlineHover" href="#" id="text5" name="text5">Ξέχασες τον Κωδικό σου?</a>
@@ -168,6 +190,12 @@ if (isset($_POST['login1'])) {
                     <button type=submit class="btn btn-success" id="text4" name="text4">Σύνδεση</button>
                 </p>
             </form>
+            <?php
+                if(isset($_SESSION['login_error'])) {
+                    echo $_SESSION['login_error'];
+                }
+                unset($_SESSION['login_error']);
+            ?>
         </div>
     </div>
 

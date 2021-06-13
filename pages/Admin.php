@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +53,9 @@
               <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
               <div class="mt-3">
                 <p></p>
-                <h4>Διαχειριστής</h4>
+                  <?php
+                  echo '<h4>'.$_SESSION['username'].'</h4>';
+                  ?>
               </div>
             </div>
           </div>
@@ -65,7 +70,9 @@
                 <h6 class="mb-0">Όνομα Χρήστη</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                Admin
+                  <?php
+                  echo $_SESSION['username'];
+                  ?>
               </div>
             </div>
             <hr>
@@ -74,7 +81,9 @@
                 <h6 class="mb-0">Email</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                admin@gmail.com
+                  <?php
+                  echo $_SESSION['email'];
+                  ?>
               </div>
             </div>
             <hr>
@@ -83,7 +92,9 @@
                 <h6 type="password" class="mb-0">Κωδικός Πρόσβασης</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                Password1234
+                  <?php
+                  echo $_SESSION['password'];
+                  ?>
               </div>
             </div>
             <hr>
@@ -99,7 +110,7 @@
       <div class="col-md-8">
         <h4>Περιγραφή</h4>
         <label id="text1" for="exampleFormControlTextarea1" class="form-label"></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required name="message"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required name="message"><?php echo $_SESSION['about'];?></textarea>
       </div>
       <div class="col-md-12">
         <h3>Χρήστες</h3>

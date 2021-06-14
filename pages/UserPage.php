@@ -94,6 +94,8 @@ session_start();
                         <div class="row">
                             <div class="col-sm-12">
                                 <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
+                               <button type=submit class="btn btn-success" id="edit" disabled>Αποθήκευση Αλλαγών</button>
+
                             </div>
                         </div>
                       <?php
@@ -111,6 +113,10 @@ session_start();
                           name="message"><?php echo $_SESSION['about'] ?></textarea>
                 </div>
             </div>
+             <div class="col-md-12">
+                            <button type=submit class="btn btn-danger" id="edit" disabled>Αποσύνδεση</button>
+                            <button type=submit class="btn btn-danger" id="edit" disabled>Διαγραφή Λογαριασμού</button>
+                        </div>
 
             </div>
 

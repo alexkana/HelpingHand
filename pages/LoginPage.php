@@ -36,7 +36,7 @@ if (isset($_POST['login3'])) {
     include("../phpScripts/dbconnect.php5");
     $username = $_POST['login3'];
     $password = $_POST['password3'];
-    $sql_query = "SELECT * FROM users WHERE name = '$username' AND password = '$password'";
+    $sql_query = "SELECT * FROM users WHERE password = '$password' AND (name = '$username' OR email='$username')";
     $res = $conn->query($sql_query);
     $conn->close();
     if (!empty($res) && $res->num_rows > 0) {
@@ -148,7 +148,7 @@ if (isset($_POST['login3'])) {
                 <p><input type="password" id="password3" class="fadeIn third" required name="password3"
                           placeholder="Κωδικός πρόσβασης"></p>
                 <div id="formFooter1">
-                    <a class="underlineHover" href="#" id="text5" name="text5">Ξέχασες τον Κωδικό σου?</a>
+                    <a class="underlineHover" href="#" id="text5" name="text5"></a>
                 </div>
                 <p>
                     <button type=submit class="btn btn-success" id="text4" name="text4">Σύνδεση</button>

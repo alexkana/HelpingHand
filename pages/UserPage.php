@@ -104,14 +104,15 @@ session_start();
                 <h4>Περιγραφή</h4>
                 <label id="text1" for="exampleFormControlTextarea1" class="form-label"></label>
                 <div id="description">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
-                          name="message"><?php echo $_SESSION['about'] ?></textarea>
+                <label><?php echo $_SESSION['about'] ?></label>
                 </div>
                 <br><br>
             </div>
             <div class="col-md-12">
+                <form method="post" action="../phpScripts/deleteUser.php" id="del_form">
                 <button type=button class="btn btn-danger">Αποσύνδεση</button>
-                <button type=button class="btn btn-danger">Διαγραφή Λογαριασμού</button>
+                <button type=submit class="btn btn-danger" form="del_form">Διαγραφή Λογαριασμού</button>
+                </form>
             </div>
 
         </div>

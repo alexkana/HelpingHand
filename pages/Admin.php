@@ -189,6 +189,9 @@ session_start();
                             <th scope="col">#</th>
                             <th scope="col">Όργανισμός</th>
                             <th scope="col">Ιστοσελίδα</th>
+                            <th scope="col">Εικόνα</th>
+                            <th scope="col">Περιγραφή (Gr)</th>
+                            <th scope="col">Περιγραφή (En)</th>
                             <th scope="col">Διαγραφή</th>
                         </tr>
                         </thead>
@@ -196,8 +199,8 @@ session_start();
                         <?php
                         $host = "localhost";
                         $db = "database_structure";
-                        $user = "app";
-                        $password = "1234";
+                        $user = "root";
+                        $password = "christos";
                         $charset = 'utf8mb4';
                         $counter = 0;
                         $conn = new mysqli($host, $user, $password, $db);
@@ -215,12 +218,18 @@ session_start();
                                     $id = $row["id"];
                                     $title = $row["title"];
                                     $url = $row['url'];
+                                    $img_url = $row['imagePath'];
+                                    $description_Greek = $row['description_GR'];
+                                    $description_English = $row['description_EN'];
                                     $counter+= 1;
                                     $form_id = $id."orgform";
                                     echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $title . '</td>
                             <td>' . $url . '</td>
+                            <td>' . $img_url . '</td>
+                            <td>' . $description_Greek . '</td>
+                            <td>' . $description_English . '</td>
                             <td><form method="post" action="../phpFiles/delbutton.php?id='.$id.'&table=organizationdata" id="'.$form_id.'"><button type="submit" form="'.$form_id.'" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }

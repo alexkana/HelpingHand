@@ -110,9 +110,18 @@ session_start();
                 <br><br>
             </div>
             <div class="col-md-12">
-                <button type=button class="btn btn-danger">Αποσύνδεση</button>
+                <button onclick="disconnect()" type=button class="btn btn-danger">Αποσύνδεση</button>
                 <button type=button class="btn btn-danger">Διαγραφή Λογαριασμού</button>
             </div>
+
+            <script>
+                function disconnect() {
+                    window.location = 'mainpage.php'
+                    document.getElementById("item6").style.display = "none";
+                    document.getElementById("item5").style.display = "block";
+                    sessionStorage.setItem("showProfile","false");
+                }
+            </script>
 
         </div>
 

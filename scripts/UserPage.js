@@ -31,5 +31,6 @@ function editInputField2(){
 
     save_btn.disabled = true;
     edit_btn.disabled = false;
+    return true;
 }
 

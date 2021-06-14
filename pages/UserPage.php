@@ -95,7 +95,7 @@ session_start();
                 <div class="card mb-3">
                     <div class="card-body">
                         <?php
-                          echo '<form method="post" action="../phpScripts/updateUser.php?id='.$_SESSION["id"].'" id="edit_user">'
+                          echo '<form onsubmit="return editInputField2();"" "method="post" action="../phpScripts/updateUser.php?id='.$_SESSION["id"].'" id="edit_user">'
                                                 ?>
                         <div class="row">
                             <div class="col-sm-3">
@@ -128,7 +128,7 @@ session_start();
                         <div class="row">
                             <div class="col-sm-12">
                                 <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
-                                <button  onclick="editInputField2()" type=submit class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών</button>
+                                <button   type="submit" class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών</button>
                             </div>
                         </div>
                       <?php

@@ -18,12 +18,7 @@ if (isset($_POST['login1'])) {
 
         $conn->close();
         session_write_close();
-
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        $_SESSION['email'] = $email;
-        $_SESSION['about'] = 'Hi !';
-        header("Location: ../pages/UserPage.php");
+        header("Location: ../pages/mainpage.php");
         exit;
     }
     $conn->close();
@@ -50,7 +45,7 @@ if (isset($_POST['login3'])) {
         if ($_SESSION['username'] == 'admin') {
             header("Location: ../pages/Admin.php");
         } else {
-            header("Location: ../pages/Userpage.php");
+            header("Location: ../pages/UserPage.php");
         }
 
         exit;

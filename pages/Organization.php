@@ -90,8 +90,6 @@
 
 </section>
 
-
-
 <?php
 $host = "localhost";
 $db = "database_structure";

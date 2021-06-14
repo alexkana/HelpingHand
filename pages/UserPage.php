@@ -6,6 +6,7 @@ session_start();
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="icon" href="../images/logo.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
@@ -24,7 +25,7 @@ session_start();
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
                                                       class="d-inline-block align-top"
-                                                      onclick="window.location = 'mainpage.html'" alt=""></a>
+                                                      onclick="window.location = 'mainpage.php'" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,17 +34,17 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a id="item1" class="nav-link" href="mainpage.html">Αρχική
+                            <a id="item1" class="nav-link" href="mainpage.php">Αρχική
                                 Σελίδα</a>
                         </li>
                         <li class="nav-item">
-                            <a id="item2" class="nav-link" href="AboutUs.html">Σχετικά με εμάς</a>
+                            <a id="item2" class="nav-link" href="AboutUs.php">Σχετικά με εμάς</a>
                         </li>
                         <li class="nav-item">
                             <a id="item3" class="nav-link" href="Organization.php">Οργανώσεις</a>
                         </li>
                         <li class="nav-item">
-                            <a id="item4" class="nav-link" href="contact.html">Επικοινωνία</a>
+                            <a id="item4" class="nav-link" href="contact.php">Επικοινωνία</a>
                         </li>
                         <li class="nav-item">
                             <a id="item5"  aria-current="page" class="nav-link" href="UserPage.php">Το προφίλ μου</a>
@@ -129,4 +130,5 @@ session_start();
         </div>
     </div>
 </div>
+</body>
 <br><br>

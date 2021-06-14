@@ -249,11 +249,66 @@ session_start();
                 </div>
                 <button onclick="addOrgForm()" type="button" class="btn btn-primary">Προσθήκη Οργανισμού</button>
             </div>
+            <div class="col-md-12">
+                    <h3>Email</h3>
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <form method="post"></form>
+                    <table class="table table-bordered table-striped mb-0">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Απο</th>
+                            <th scope="col">Μήνυμα</th>
+                            <th scope="col">Διαγραφή</th>
+                            <th scope="col">Απάντηση</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $host = "localhost";
+                        $db = "database_structure";
+                        $user = "app";
+                        $password = "1234";
+                        $charset = 'utf8mb4';
+
+                        if ($conn->connect_error) {
+                            echo '<p>Error connecting to the database <br>';
+                            echo 'Please try again.</p>';
+                            exit();
+                        } else {
+                            $sql = "SELECT * FROM emails";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while ($row = $result->fetch_assoc()) {
+                                    $id = $row["id"];
+                                    $from = $row["title"];
+                                    $content = $row['content'];
+
+                                    echo '<tr>
+                            <th scope="row">' . id . '</th>
+                            <td>' . $from . '</td>
+                            <td>' . $content . '</td>
+                            <td><form method="post"><button type="submit" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><form method="post"><button type="submit" class="btn btn-success">Απάντηση</button></form></td>
+
+                        </tr>';
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+                        }
+                        $conn->close();
+                        ?>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
 
         </div>
     </div>
 </div>
 <br><br>
-
-</body>
-</html>

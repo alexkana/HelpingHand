@@ -13,7 +13,11 @@ session_start();
             crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="../styles/UserPage.css">
+    <link rel="icon" href="../images/logo.png">
+    <script type="text/javascript" src="../scripts/script.js"></script>
     <script type="text/javascript" src="../scripts/UserPage.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 
     <meta charset="UTF-8">
 
@@ -21,6 +25,13 @@ session_start();
 
 </head>
 <body>
+
+<?php include('../phpScripts/navbar.php')?>
+
+<script>
+    document.getElementById("item6").className = "nav-link active";
+</script>
+<!--
 <section id="nav">
     <div id="navigation">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,7 +71,7 @@ session_start();
     </div>
 
 </section>
-
+-->
 
 <div class="container">
     <div class="main-body">
@@ -117,6 +128,7 @@ session_start();
                         <div class="row">
                             <div class="col-sm-12">
                                 <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
+                                <button  onclick="editInputField2()" type=submit class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών</button>
                             </div>
                         </div>
                       <?php
@@ -142,5 +154,17 @@ session_start();
 </div>
 </body>
 <br><br>
+
+<?php include('../phpScripts/footer.php'); ?>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+<script>trans_navbar();</script>
+
+
+</body>
+</html>
 </body>
 </html>

@@ -202,8 +202,8 @@ session_start();
                         <?php
                         $host = "localhost";
                         $db = "database_structure";
-                        $user = "root";
-                        $password = "christos";
+                        $user = "app";
+                        $password = "1234";
                         $charset = 'utf8mb4';
                         $counter = 0;
                         $conn = new mysqli($host, $user, $password, $db);

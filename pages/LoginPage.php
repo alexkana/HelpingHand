@@ -27,7 +27,7 @@ if (isset($_POST['login1'])) {
     header("Location: ../pages/LoginPage.php");
     exit;
 }
-if(isset($_POST['login3'])){
+if (isset($_POST['login3'])) {
     global $conn;
     include("../phpFiles/dbconnect.php5");
     $username = $_POST['login3'];
@@ -35,21 +35,21 @@ if(isset($_POST['login3'])){
     $sql_query = "SELECT name,password,email,about FROM users WHERE name = '$username' AND password = '$password'";
     $res = $conn->query($sql_query);
     $conn->close();
-    if(!empty($res) && $res->num_rows > 0) {
+    if (!empty($res) && $res->num_rows > 0) {
         unset($_SESSION['login_error']);
         $record = $res->fetch_assoc();
         $_SESSION['username'] = $record['name'];
         $_SESSION['password'] = $record['password'];
         $_SESSION['email'] = $record['email'];
         $_SESSION['about'] = $record['about'];
-        if($_SESSION['username'] == 'admin'){
+        if ($_SESSION['username'] == 'admin') {
             header("Location: ../pages/Admin.php");
-        }else{
+        } else {
             header("Location: ../pages/mainpage.html");
         }
 
         exit;
-    }else{
+    } else {
         $_SESSION['login_error'] = '<p style="color:red;" >Invalid username or password</p>';
     }
     header("Location: ../pages/LoginPage.php");
@@ -88,7 +88,6 @@ if(isset($_POST['login3'])){
 
     <title>A Helping Hand</title>
 </head>
-<body>
 
 <section id="nav">
     <div id="navigation">
@@ -204,10 +203,10 @@ if(isset($_POST['login3'])){
                 </p>
             </form>
             <?php
-                if(isset($_SESSION['login_error'])) {
-                    echo $_SESSION['login_error'];
-                }
-                unset($_SESSION['login_error']);
+            if (isset($_SESSION['login_error'])) {
+                echo $_SESSION['login_error'];
+            }
+            unset($_SESSION['login_error']);
             ?>
         </div>
     </div>

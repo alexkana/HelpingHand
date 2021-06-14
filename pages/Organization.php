@@ -48,19 +48,19 @@
                                 Σελίδα</a>
                         </li>
                         <li class="nav-item">
-                            <a id="item2" class="nav-link" href="AboutUs.php">Σχετικά με εμάς</a>
+                            <a id="item2" class="nav-link" href="AboutUs.php"></a>
                         </li>
                         <li class="nav-item">
-                            <a id="item3" class="nav-link" href="Organization.php">Οργανώσεις</a>
+                            <a id="item3" class="nav-link" href="Organization.php"></a>
                         </li>
                         <li class="nav-item">
-                            <a id="item4" class="nav-link" href="contact.php">Επικοινωνία</a>
+                            <a id="item4" class="nav-link" href="contact.php"></a>
                         </li>
                         <li class="nav-item">
-                            <a id="item5" class="nav-link" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
+                            <a id="item5" class="nav-link" href="LoginPage.php"></a>
                         </li>
                         <li class="nav-item">
-                            <a id="item6" class="nav-link" href="../pages/UserPage.php">Προφίλ</a>
+                            <a id="item6" class="nav-link" href="../pages/UserPage.php"></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
@@ -92,12 +92,12 @@
 
 <script>
 
-    if(sessionStorage.getItem("showProfile") === null || sessionStorage.getItem("showProfile") === "false"){
+    if (sessionStorage.getItem("showProfile") === null || sessionStorage.getItem("showProfile") === "false") {
 
         document.getElementById("item6").style.display = "none";
         document.getElementById("item5").style.display = "block";
-        sessionStorage.setItem("showProfile","false");
-    }else if(sessionStorage.getItem("showProfile") === "true"){
+        sessionStorage.setItem("showProfile", "false");
+    } else if (sessionStorage.getItem("showProfile") === "true") {
         document.getElementById("item6").style.display = "block";
         document.getElementById("item5").style.display = "none";
 
@@ -105,15 +105,18 @@
 </script>
 
 <div class="col-lg-12 text-center mt-5">
-  <h3>Αναζήτηση οργανισμών</h3>
+    <h3>Αναζήτηση οργανισμών</h3>
 </div>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="search_bar"></form>
 <div class="col-md-4 offset-md-4 mt-5 ">
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search ......" aria-label="Recipient's username">
-  <div class="input-group-append">
-    <span class="input-group-text"><i class="fa fa-search"></i></span>
-  </div>
-  </div>
+    <div class="input-group mb-3">
+        <input form="search_bar" type="text" class="form-control" placeholder="Search ......" name="bar">
+        <div class="input-group-append">
+            <button type="submit" style="border: none" form="search_bar"><span class="input-group-text"><i
+                            class="fa fa-search"></i></span></button>
+        </div>
+
+    </div>
 </div>
 
 <?php
@@ -128,18 +131,22 @@ if ($conn->connect_error) {
     echo '<p>Error connecting to the database <br>';
     echo 'Please try again.</p>';
     exit();
-}else{
-    $sql = "SELECT * FROM organizationdata";
+} else {
+    $search_query = ' ';
+    if(isset($_POST['bar']) and $_POST['bar']!=null){
+        $search_query = $_POST['bar'];
+    }
+    $sql = "SELECT * FROM organizationdata WHERE title LIKE '%$search_query%' OR description_GR LIKE '%_$search_query%' OR description_EN LIKE '%$search_query%'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
-            $id =  $row["id"];
-            $title =  $row["title"];
+        while ($row = $result->fetch_assoc()) {
+            $id = $row["id"];
+            $title = $row["title"];
             $imgSource = $row['imagePath'];
-            $description_Greek  = $row['description_GR'];
-            $description_English  = $row['description_EN'];
+            $description_Greek = $row['description_GR'];
+            $description_English = $row['description_EN'];
             $url = $row['url'];
             $lan = 0;
 
@@ -151,8 +158,8 @@ if ($conn->connect_error) {
     <div class="container-fluid padding">
         <div class="row padding">
             <div class="col-md-6  text-md-left text-center">
-                <a target="_blank" href="'.$url.'">
-                    <img alt="Qries" src="'.$imgSource.'"
+                <a target="_blank" href="' . $url . '">
+                    <img alt="Qries" src="' . $imgSource . '"
                          style="width: 0.1vw; min-width: 330px;"
                          class="img-fluid">
                 </a>
@@ -161,7 +168,7 @@ if ($conn->connect_error) {
                 <div class="text">
 
                     <h1>
-                        <a target="_blank" href="'.$url.'" style="color: #eb3349">'.$title.'</a>
+                        <a target="_blank" href="' . $url . '" style="color: #eb3349">' . $title . '</a>
                     </h1>
                     
               
@@ -170,9 +177,9 @@ if ($conn->connect_error) {
 
 
                         if (sessionStorage.getItem("language") === "en") {                   
-                           document.write( "'.$description_English.'");
+                           document.write( "' . $description_English . '");
                         }else{
-                          document.write( "'.$description_Greek.'");   
+                          document.write( "' . $description_Greek . '");   
                         }
                     </script>
                     

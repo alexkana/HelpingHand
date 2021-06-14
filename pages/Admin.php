@@ -293,8 +293,8 @@ session_start();
                             <td>' . $from . '</td>
                             <td>' . $content . '</td>
                             <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=emails" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
-                            <td><form method="post"><button type="submit" class="btn btn-success">Απάντηση</button></form></td>
-                
+                            <td><a target="_blank" class="btn btn-success" type="submit" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=helpinghandauth@gmail.com">Απάντηση</a></td>
+          
                         </tr>';
                                 }
                             } else {

@@ -5,7 +5,6 @@ function editInputField(){
     let desc_value = document.getElementById("description").innerText;
     let save_btn = document.getElementById("savebtn")
     let edit_btn = document.getElementById("edit")
-
     save_btn.disabled = false;
     edit_btn.disabled = true;
 

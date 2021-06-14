@@ -247,9 +247,9 @@ session_start();
                 <button onclick="addOrgForm()" type="button" class="btn btn-primary">Προσθήκη Οργανισμού</button>
             </div>
             <div class="col-md-12">
-                <h3>Οργανισμοί</h3>
+                    <h3>Email</h3>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                    <form method="post" action='../phpFiles/addbuttonOrg.php' id="org_add_form"></form>
+                    <form method="post"></form>
                     <table class="table table-bordered table-striped mb-0">
                         <thead>
                         <tr>
@@ -258,6 +258,7 @@ session_start();
                             <th scope="col">Μήνυμα</th>
                             <th scope="col">Διαγραφή</th>
                             <th scope="col">Απάντηση</th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -308,6 +309,3 @@ session_start();
     </div>
 </div>
 <br><br>
-
-</body>
-</html>

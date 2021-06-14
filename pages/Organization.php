@@ -103,19 +103,18 @@
 
     }
 </script>
-<div class="search_org">
-<div class="input-group">
-  <div class="form-outline">
-    <input type="search" id="form1" class="form-control" />
-    <label class="form-label" for="form1">Search</label>
+
+<div class="col-lg-12 text-center mt-5">
+  <h3>Αναζήτηση οργανισμών</h3>
+</div>
+<div class="col-md-4 offset-md-4 mt-5 ">
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Search ......" aria-label="Recipient's username">
+  <div class="input-group-append">
+    <span class="input-group-text"><i class="fa fa-search"></i></span>
   </div>
-  <button type="button" class="btn btn-primary">
-    <i class="fas fa-search"></i>
-  </button>
+  </div>
 </div>
-</div>
-
-
 
 <?php
 $host = "localhost";

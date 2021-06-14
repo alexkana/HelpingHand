@@ -285,16 +285,16 @@ session_start();
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
                                     $id = $row["id"];
-                                    $from = $row["title"];
+                                    $from = $row["sender"];
                                     $content = $row['content'];
-
+                                    $form_id = $id . "emailform";
                                     echo '<tr>
-                            <th scope="row">' . id . '</th>
+                            <th scope="row">' . $id . '</th>
                             <td>' . $from . '</td>
                             <td>' . $content . '</td>
-                            <td><form method="post"><button type="submit" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=emails" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
                             <td><form method="post"><button type="submit" class="btn btn-success">Απάντηση</button></form></td>
-
+                
                         </tr>';
                                 }
                             } else {

@@ -13,16 +13,16 @@ if (isset($_POST['login1'])) {
     if ($conn->query($sql_query) == false) {
         $_SESSION['sign_up_error'] = '<p style="color:red;" >A user with this name or email already exists!</p>';
     } else {
-
+        $sql_query = "SELECT * FROM users WHERE password = '$password' AND (name = '$username' OR email='$username')";
+        $res = $conn->query($sql_query);
+        $record = $res->fetch_assoc();
         unset($_SESSION['login_error']);
-
-        $conn->close();
-        session_write_close();
+        $_SESSION['id'] = $record['id'];
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $_SESSION['email'] = $email;
-        $_SESSION['about'] = '';
-
+        $_SESSION['about'] = $record['about'];
+        $conn->close();
         header("Location: ../pages/UserPage.php");
         exit;
     }

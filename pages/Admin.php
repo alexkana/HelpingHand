@@ -6,11 +6,10 @@ session_start();
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"></script>
-
     <link rel="stylesheet" type="text/css" href="../styles/Admin.css">
     <meta charset="UTF-8">
 
@@ -140,7 +139,7 @@ session_start();
                         } else {
                             $sql = "SELECT * FROM users";
                             $result = $conn->query($sql);
-                            $id = 0;
+                            $counter = 0;
 
                             if ($result->num_rows > 0) {
                                 // output data of each row
@@ -148,28 +147,31 @@ session_start();
                                     $name = $row["name"];
                                     $password = $row["password"];
                                     $email = $row['email'];
-                                    $id += 1;
-
-
+                                    $counter+= 1;
+                                    $id = $row['id'];
+                                    $form_id = $id."form";
                                     echo '<tr>
-                            <th scope="row">' . $id . '</th>
+                            <th scope="row">' . $counter . '</th>
                             <td>' . $name . '</td>
                             <td>' . $email . '</td>
                             <td>' . $password . '</td>
-                            <td><button type="button" class="btn btn-danger">Διαγραφή</button></td>
+                            <td><form method="post" action="../phpFiles/delbutton.php?id='.$id.'&table=users" id="'.$form_id.'"><button type="submit" form="'.$form_id.'" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }
                             } else {
                                 echo "0 results";
                             }
                         }
+                        $conn->close();
                         ?>
-
+                        <tr>
+                            <td>lol</td>
+                        </tr>
                         </tbody>
                     </table>
 
                 </div>
-                <button type="button" class="btn btn-primary">Προσθήκη Χρήστη</button>
+                <button onclick="" type="button" class="btn btn-primary">Προσθήκη Χρήστη</button>
             </div>
             <div class="col-md-12">
                 <h3>Οργανισμοί</h3>
@@ -191,7 +193,7 @@ session_start();
                         $user = "app";
                         $password = "1234";
                         $charset = 'utf8mb4';
-
+                        $counter = 0;
                         $conn = new mysqli($host, $user, $password, $db);
                         if ($conn->connect_error) {
                             echo '<p>Error connecting to the database <br>';
@@ -207,19 +209,20 @@ session_start();
                                     $id = $row["id"];
                                     $title = $row["title"];
                                     $url = $row['url'];
-
-
+                                    $counter+= 1;
+                                    $form_id = $id."form";
                                     echo '<tr>
-                            <th scope="row">' . $id . '</th>
+                            <th scope="row">' . $counter . '</th>
                             <td>' . $title . '</td>
                             <td>' . $url . '</td>
-                            <td><button type="button" class="btn btn-danger">Διαγραφή</button></td>
+                            <td><form method="post" action="../phpFiles/delbutton.php?id='.$id.'&table=organizationdata" id="'.$form_id.'"><button type="submit" form="'.$form_id.'" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }
                             } else {
                                 echo "0 results";
                             }
                         }
+                        $conn->close();
                         ?>
 
                         </tbody>

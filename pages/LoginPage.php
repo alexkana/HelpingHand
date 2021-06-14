@@ -34,6 +34,7 @@ if(isset($_POST['login3'])){
     $password = $_POST['password3'];
     $sql_query = "SELECT name,password,email,about FROM users WHERE name = '$username' AND password = '$password'";
     $res = $conn->query($sql_query);
+    $conn->close();
     if(!empty($res) && $res->num_rows > 0) {
         unset($_SESSION['login_error']);
         $record = $res->fetch_assoc();

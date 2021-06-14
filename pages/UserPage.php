@@ -97,6 +97,7 @@ session_start();
                         <?php
                           echo '<form onsubmit="return editInputField2();"" "method="post" action="../phpScripts/updateUser.php?id='.$_SESSION["id"].'" id="edit_user">'
                                                 ?>
+
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>

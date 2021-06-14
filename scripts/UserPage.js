@@ -28,7 +28,6 @@ function editInputField2(){
     document.getElementById("description").innerHTML = "<textarea rows='6'>" + document.getElementById("input4").value + "</textarea>";
     let save_btn = document.getElementById("savebtn")
     let edit_btn = document.getElementById("edit")
-
     save_btn.disabled = true;
     edit_btn.disabled = false;
     return true;

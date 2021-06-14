@@ -90,6 +90,20 @@
 
 </section>
 
+<script>
+
+    if(sessionStorage.getItem("showProfile") === null || sessionStorage.getItem("showProfile") === "false"){
+
+        document.getElementById("item6").style.display = "none";
+        document.getElementById("item5").style.display = "block";
+        sessionStorage.setItem("showProfile","false");
+    }else if(sessionStorage.getItem("showProfile") === "true"){
+        document.getElementById("item6").style.display = "block";
+        document.getElementById("item5").style.display = "none";
+
+    }
+</script>
+
 
 
 <?php

@@ -2,8 +2,9 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="icon" href="../images/logo.png">
@@ -11,6 +12,9 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"></script>
+
+
+
 
     <link rel="stylesheet" type="text/css" href="../styles/UserPage.css">
     <link rel="icon" href="../images/logo.png">
@@ -30,48 +34,10 @@ session_start();
 
 <script>
     document.getElementById("item6").className = "nav-link active";
+    sessionStorage.setItem("showProfile","true");
+    document.getElementById("item6").style.display = "block";
+    document.getElementById("item5").style.display = "none";
 </script>
-<!--
-<section id="nav">
-    <div id="navigation">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
-                                                      class="d-inline-block align-top"
-                                                      onclick="window.location = 'mainpage.php'" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a id="item1" class="nav-link" href="mainpage.php">Αρχική
-                                Σελίδα</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item2" class="nav-link" href="AboutUs.php">Σχετικά με εμάς</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item3" class="nav-link" href="Organization.php">Οργανώσεις</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item4" class="nav-link" href="contact.php">Επικοινωνία</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item5"  aria-current="page" class="nav-link" href="UserPage.php">Το προφίλ μου</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </div>
-
-</section>
--->
 
 <div class="container">
     <div class="main-body">
@@ -155,7 +121,7 @@ session_start();
 <br><br>
 
 <?php include('../phpScripts/footer.php'); ?>
-
+<script>trans_navbar()</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"

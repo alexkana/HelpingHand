@@ -23,6 +23,7 @@ if (isset($_POST['login1'])) {
         $_SESSION['password'] = $password;
         $_SESSION['email'] = $email;
         $_SESSION['about'] = 'Hi !';
+
         header("Location: ../pages/UserPage.php");
         exit;
     }
@@ -50,7 +51,7 @@ if (isset($_POST['login3'])) {
         if ($_SESSION['username'] == 'admin') {
             header("Location: ../pages/Admin.php");
         } else {
-            header("Location: ../pages/Userpage.php");
+            header("Location: ../pages/UserPage.php");
         }
 
         exit;

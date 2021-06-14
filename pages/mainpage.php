@@ -31,7 +31,9 @@
 <?php include('../phpScripts/navbar.php'); ?>
 <script>
     document.getElementById("item1").className = "nav-link active";
+
 </script>
+
 
 
 <div id="slider">

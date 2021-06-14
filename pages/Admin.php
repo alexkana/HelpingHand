@@ -24,9 +24,7 @@ session_start();
     <div id="navigation">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
-                                                      class="d-inline-block align-top"
-                                                      onclick="window.location = 'mainpage.html'" alt=""></a>
+                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px" class="d-inline-block align-top" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +36,7 @@ session_start();
                             <a id="item1" class="nav-link" aria-current="page" href="mainpage.php"></a>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn btn-danger">Αποσύνδεση</button>
+                            <button onclick="window.location = 'mainpage.php'" type="button" class="btn btn-danger">Αποσύνδεση</button>
                         </li>
                     </ul>
 
@@ -46,7 +44,10 @@ session_start();
             </div>
         </nav>
 
+        </script>
+
     </div>
+
 </section>
 
 

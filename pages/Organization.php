@@ -29,64 +29,7 @@
 </head>
 <body>
 
-<section id="nav">
-    <div id="navigation">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
-                                                      class="d-inline-block align-top"
-                                                      onclick="window.location = 'mainpage.html'" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown"
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a id="item1" class="nav-link" aria-current="page" href="mainpage.html">Αρχική
-                                Σελίδα</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item2" class="nav-link" href="AboutUs.html">Σχετικά με εμάς</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item3" class="nav-link" href="Organization.php">Οργανώσεις</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item4" class="nav-link" href="contact.html">Επικοινωνία</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="item5" class="nav-link" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a onclick="sessionStorage.setItem('language','el');location.reload();trans_navbar()"
-                                   href="#" class="dropdown-item">
-                                    <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
-                                </a>
-                                <a onclick="sessionStorage.setItem('language','en');location.reload(); trans_navbar()"
-                                   href="#"
-                                   class="dropdown-item">
-                                    <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
-                                    English
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <script>
-            document.getElementById("item3").className = "nav-link active";
-        </script>
-    </div>
-
-</section>
-
+<?php include('../phpScripts/navbar.php'); ?>
 
 
 
@@ -167,86 +110,7 @@ if ($conn->connect_error) {
 
 
 <!-- Footer -->
-<footer class="bg-dark text-center text-lg-start">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-4 mb-4 mb-md-0">
-                <p id="footer_msg" style="color: whitesmoke"></p>
-                <p class="fa fa-phone d-inline"> (+30) 6947483***</p>
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                <center>
-                    <ul class="list-unstyled">
-                        <li class="footerlinks">
-                            <p id="list_title" style="color:whitesmoke">Πλοήγηση</p>
-                        </li>
-                        <li class="footerlinks">
-                            <a id="footer1" style="color:whitesmoke" href="mainpage.html">Αρχική Σελίδα</a>
-                        </li>
-                        <li class="footerlinks">
-                            <a id="footer2" style="color:whitesmoke" href="AboutUs.html">Σχετικά με εμάς</a>
-                        </li>
-
-                        <li class="footerlinks">
-                            <a id="footer3" style="color:whitesmoke" href="Organization.php">Οργανισμοί</a>
-                        </li>
-                        <li class="footerlinks">
-                            <a id="footer4" style="color:whitesmoke" href="contact.html">Επικοινωνία</a>
-                        </li>
-                        <li class="footerlinks">
-                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
-                        </li>
-
-                    </ul>
-                </center>
-            </div>
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                <center>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <p id="social" style="color: whitesmoke">Κοινωνικά Δίκτυα</p>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/Helping-Hand-110377947861394" target="_blank"
-                               class="fa fa-facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/Helping86441471" target="_blank" class="fa fa-twitter"></a>
-                        </li>
-                        <li>
-                            <a href="https://gr.pinterest.com/helpinghandauth/_saved/" target="_blank"
-                               class="fa fa-pinterest"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/helping_hand.auth/" target="_blank"
-                               class="fa fa-instagram"></a>
-                        </li>
-
-
-                    </ul>
-                </center>
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-        </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: whitesmoke">
-        © 2021 Copyright:
-        <a class="text-white" href="">helpingHand.com</a>
-    </div>
-    <!-- Copyright -->
-</footer>
+<?php include('../phpScripts/footer.php'); ?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"

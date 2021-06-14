@@ -26,6 +26,9 @@ echo '<div id="navigation">
                     <li class="nav-item">
                         <a id="item5" class="nav-link" href="../pages/LoginPage.php"></a>
                     </li>
+                    <li class="nav-item">
+                        <a id="item6" class="nav-link" href="../pages/UserPage.php"></a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">

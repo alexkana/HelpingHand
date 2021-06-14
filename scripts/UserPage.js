@@ -8,13 +8,13 @@ function editInputField(){
     save_btn.disabled = false;
     edit_btn.disabled = true;
 
-    document.getElementById("user_field").innerHTML = "<input id='input1' style='border:none' type='text' required name='username' >";
+    document.getElementById("user_field").innerHTML = "<input id='input1' style='border:none' type='text' required name='username' form='edit_user'>";
     document.getElementById("input1").value = user_value;
-    document.getElementById("email_field").innerHTML = "<input id='input2' style='border:none' type='text' required name='email' >";
+    document.getElementById("email_field").innerHTML = "<input id='input2' style='border:none' type='text' required name='email' form='edit_user'>";
     document.getElementById("input2").value = email_value;
-    document.getElementById("pass_field").innerHTML = "<input id='input3' style='border:none' type='text' required name='pass' >";
+    document.getElementById("pass_field").innerHTML = "<input id='input3' style='border:none' type='text' required name='pass' form='edit_user' >";
     document.getElementById("input3").value = pass_value;
-    document.getElementById("description").innerHTML = "<input id='input4' rows=6 style='border:none' type='text' required name='desc' >";
+    document.getElementById("description").innerHTML = "<input id='input4' style='border:none' type='text' required name='desc' form='edit_user'>";
     document.getElementById("input4").value = desc_value;
 
 }

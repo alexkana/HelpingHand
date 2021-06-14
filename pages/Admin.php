@@ -10,6 +10,7 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"></script>
+    <script src="../scripts/addBtnForm.js"></script>
     <link rel="stylesheet" type="text/css" href="../styles/Admin.css">
     <meta charset="UTF-8">
 
@@ -164,14 +165,14 @@ session_start();
                         }
                         $conn->close();
                         ?>
-                        <tr>
-                            <td>lol</td>
+                        <tr id="add_row">
+
                         </tr>
                         </tbody>
                     </table>
 
                 </div>
-                <button onclick="" type="button" class="btn btn-primary">Προσθήκη Χρήστη</button>
+                <button onclick="addForm()" type="button" class="btn btn-primary">Προσθήκη Χρήστη</button>
             </div>
             <div class="col-md-12">
                 <h3>Οργανισμοί</h3>
@@ -210,7 +211,7 @@ session_start();
                                     $title = $row["title"];
                                     $url = $row['url'];
                                     $counter+= 1;
-                                    $form_id = $id."form";
+                                    $form_id = $id."orgform";
                                     echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $title . '</td>

@@ -44,8 +44,6 @@ echo '<div id="navigation">
         </div>
     </nav>
 
-    <script>
-        document.getElementById("item1").className = "nav-link active";
-    </script>
+ 
 </div>
 ';

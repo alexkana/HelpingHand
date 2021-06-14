@@ -30,6 +30,9 @@
 <body>
 
 <?php include('../phpScripts/navbar.php'); ?>
+<script>
+    document.getElementById("item2").className = "nav-link active";
+</script>
 
 <div class="container-fluid padding">
     <div class="row padding">

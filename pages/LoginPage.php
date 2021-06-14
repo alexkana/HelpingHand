@@ -90,6 +90,10 @@ if (isset($_POST['login3'])) {
 
 <?php include('../phpScripts/navbar.php'); ?>
 
+<script>
+    document.getElementById("item5").className = "nav-link active";
+</script>
+
 <div class="container">
     <style>
         h1 {

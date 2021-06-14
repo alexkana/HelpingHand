@@ -26,7 +26,7 @@ session_start();
 </head>
 <body>
 
-<?php include('../phpScripts/navbar.php')?>
+<?php include('../phpScripts/navbar.php') ?>
 
 <script>
     document.getElementById("item6").className = "nav-link active";
@@ -75,6 +75,9 @@ session_start();
 
 <div class="container">
     <div class="main-body">
+        <?php
+        echo '<form method="post" action="../phpScripts/updateUser.php?id=' . $_SESSION["id"] . '" id="edit_user"></script>'
+        ?>
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card">
@@ -94,9 +97,6 @@ session_start();
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <?php
-                          echo '<form onsubmit="return editInputField2();"" "method="post" action="../phpScripts/updateUser.php?id='.$_SESSION["id"].'" id="edit_user">'
-                                                ?>
 
                         <div class="row">
                             <div class="col-sm-3">
@@ -128,13 +128,19 @@ session_start();
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
-                                <button   type="submit" class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών</button>
+                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit">
+                                    Επεξεργασία
+                                </button>
+                                <button type="submit" class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών
+                                </button>
                             </div>
+                            <?php
+                            if (isset($_SESSION['update_error'])) {
+                                echo $_SESSION['update_error'];
+                            }
+                            unset($_SESSION['update_error']);
+                            ?>
                         </div>
-                      <?php
-                       echo '</form>'
-                        ?>
                     </div>
                 </div>
 
@@ -148,10 +154,10 @@ session_start();
                 </div>
             </div>
 
-            </div>
-
         </div>
+
     </div>
+</div>
 </div>
 </body>
 <br><br>

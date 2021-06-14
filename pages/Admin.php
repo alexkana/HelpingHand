@@ -202,8 +202,8 @@ session_start();
                         <?php
                         $host = "localhost";
                         $db = "database_structure";
-                        $user = "root";
-                        $password = "christos";
+                        $user = "app";
+                        $password = "1234";
                         $charset = 'utf8mb4';
                         $counter = 0;
                         $conn = new mysqli($host, $user, $password, $db);
@@ -250,7 +250,7 @@ session_start();
                 <button onclick="addOrgForm()" type="button" class="btn btn-primary">Προσθήκη Οργανισμού</button>
             </div>
             <div class="col-md-12">
-                    <h3>Email</h3>
+                <h3>Email</h3>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
                     <form method="post"></form>
                     <table class="table table-bordered table-striped mb-0">
@@ -271,7 +271,7 @@ session_start();
                         $user = "app";
                         $password = "1234";
                         $charset = 'utf8mb4';
-                       $conn = new mysqli($host, $user, $password, $db);
+                        $conn = new mysqli($host, $user, $password, $db);
 
                         if ($conn->connect_error) {
                             echo '<p>Error connecting to the database <br>';
@@ -285,16 +285,16 @@ session_start();
                                 // output data of each row
                                 while ($row = $result->fetch_assoc()) {
                                     $id = $row["id"];
-                                    $from = $row["title"];
+                                    $from = $row["sender"];
                                     $content = $row['content'];
-
+                                    $form_id = $id . "emailform";
                                     echo '<tr>
                             <th scope="row">' . $id . '</th>
                             <td>' . $from . '</td>
                             <td>' . $content . '</td>
-                            <td><form method="post"><button type="submit" class="btn btn-danger">Διαγραφή</button></form></td>
-                            <td><form method="post"><button type="submit" class="btn btn-success">Απάντηση</button></form></td>
-
+                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=emails" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><a target="_blank" class="btn btn-success" type="submit" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to='.$from.'">Απάντηση</a></td>
+          
                         </tr>';
                                 }
                             } else {

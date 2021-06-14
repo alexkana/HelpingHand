@@ -258,7 +258,6 @@ session_start();
                             <th scope="col">Μήνυμα</th>
                             <th scope="col">Διαγραφή</th>
                             <th scope="col">Απάντηση</th>
-
                         </tr>
                         </thead>
                         <tbody>

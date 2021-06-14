@@ -95,7 +95,6 @@ session_start();
                             <div class="col-sm-12">
                                 <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
                                <button type=submit class="btn btn-success" id="edit" disabled>Αποθήκευση Αλλαγών</button>
-
                             </div>
                         </div>
                       <?php

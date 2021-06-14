@@ -94,7 +94,7 @@ session_start();
                         <div class="row">
                             <div class="col-sm-12">
                                 <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
-                               <button type=submit class="btn btn-success" id="edit" disabled>Αποθήκευση Αλλαγών</button>
+                               <button type="submit" class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών</button>
                             </div>
                         </div>
                       <?php
@@ -113,8 +113,8 @@ session_start();
                 </div>
             </div>
              <div class="col-md-12">
-                            <button type=submit class="btn btn-danger" id="edit" disabled>Αποσύνδεση</button>
-                            <button type=submit class="btn btn-danger" id="edit" disabled>Διαγραφή Λογαριασμού</button>
+                            <button type=button class="btn btn-danger"  >Αποσύνδεση</button>
+                            <button type=button class="btn btn-danger" >Διαγραφή Λογαριασμού</button>
                         </div>
 
             </div>

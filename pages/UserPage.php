@@ -83,7 +83,9 @@ session_start();
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <!--<form method="post" action='' id="edit_user"> -->
+                        <?php
+                          echo '<form method="post" action="../phpScripts/updateUser.php?id='.$_SESSION["id"].'" id="edit_user">'
+                                                ?>
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>
@@ -114,10 +116,12 @@ session_start();
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button onclick="editInputField()" type=submit class="btn btn-success" id="edit">Επεξεργασία</button>
+                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
                             </div>
                         </div>
-                       <!-- </form> -->
+                      <?php
+                       echo '</form>'
+                        ?>
                     </div>
                 </div>
 
@@ -125,8 +129,10 @@ session_start();
             <div class="col-md-8">
                 <h4>Περιγραφή</h4>
                 <label id="text1" for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required
+                <div id="description">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
                           name="message"><?php echo $_SESSION['about'] ?></textarea>
+                </div>
             </div>
 
             </div>

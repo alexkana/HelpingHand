@@ -289,7 +289,7 @@ session_start();
                                     $content = $row['content'];
 
                                     echo '<tr>
-                            <th scope="row">' . id . '</th>
+                            <th scope="row">' . $id . '</th>
                             <td>' . $from . '</td>
                             <td>' . $content . '</td>
                             <td><form method="post"><button type="submit" class="btn btn-danger">Διαγραφή</button></form></td>

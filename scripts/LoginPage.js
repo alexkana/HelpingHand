@@ -54,5 +54,4 @@ function checkLanguageText() {
     document.getElementById("list_title").innerHTML = nav;
     document.getElementById("social").innerHTML = social;
 
-
 }

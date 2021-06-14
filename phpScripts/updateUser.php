@@ -5,7 +5,7 @@ include("dbconnect.php5");
 $username = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST['pass'];
-$about = $_POST['desc'];
+$about = $conn->real_escape_string($_POST['desc']);
 $id = $_SESSION['id'];
 $sql_query = "UPDATE users SET name='$username',password='$password',email='$email',about='$about' WHERE id='$id'";
 if ($conn->query($sql_query) === false) {
@@ -15,9 +15,9 @@ if ($conn->query($sql_query) === false) {
     unset($_SESSION['update_error']);
     $_SESSION['username'] = $username;
     $_SESSION['password'] = $password;
-    $_SESSION['about'] = $about;
+    $_SESSION['about'] = stripcslashes($about);
     $_SESSION['email'] = $email;
 }
 $conn->close();
-header("Location: ../pages/UserPage.php");
+header('Location: ' . $_SERVER["HTTP_REFERER"] );
 exit;

@@ -22,7 +22,7 @@ session_start();
 
     <meta charset="UTF-8">
 
-    <title>Title</title>
+    <title>A Helping Hand</title>
 
 </head>
 <body>
@@ -44,7 +44,7 @@ session_start();
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="..\images\avatar-1577909_1280 (1).png" alt="Admin"
+                            <img src="..\images\avatar-1577909_1280 (1).png" alt="User"
                                  class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <p></p>

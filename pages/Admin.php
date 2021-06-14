@@ -18,7 +18,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../styles/Admin.css">
     <meta charset="UTF-8">
 
-    <title>Title</title>
+    <title>A Helping Hand</title>
 
 </head>
 <body>
@@ -73,6 +73,7 @@ session_start();
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
+                        <form method="post" action="../phpScripts/updateUser.php" id="edit_user"></form>
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>
@@ -116,10 +117,12 @@ session_start();
 
             </div>
             <div class="col-md-8">
-                <h4>Περιγραφή</h4>
+                <h4 id="text3">Περιγραφή</h4>
                 <label id="text1" for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required
-                          name="message"><?php echo $_SESSION['about'] ?></textarea>
+                <div id="description">
+                    <label><?php echo $_SESSION['about'] ?></label>
+                </div>
+                <br><br>
             </div>
             <div class="col-md-12">
                 <h3>Χρήστες</h3>

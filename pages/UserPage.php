@@ -12,6 +12,8 @@ session_start();
             crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="../styles/UserPage.css">
+    <script type="text/javascript" src="../scripts/UserPage.js"></script>
+
     <meta charset="UTF-8">
 
     <title>Title</title>
@@ -80,11 +82,12 @@ session_start();
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
+                        <!--<form method="post" action='' id="edit_user"> -->
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div id="user_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['username'] ?>
                             </div>
                         </div>
@@ -94,7 +97,7 @@ session_start();
                                 <h6 class="mb-0">Email</h6>
 
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div id="email_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['email'] ?>
                             </div>
                         </div>
@@ -103,16 +106,17 @@ session_start();
                             <div class="col-sm-3">
                                 <h6 type="password" class="mb-0">Κωδικός Πρόσβασης</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div id="pass_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['password'] ?>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button type=submit class="btn btn-success" id="text2">Επεξεργασία</button>
+                                <button onclick="editInputField()" type=submit class="btn btn-success" id="edit">Επεξεργασία</button>
                             </div>
                         </div>
+                       <!-- </form> -->
                     </div>
                 </div>
 
@@ -130,3 +134,5 @@ session_start();
     </div>
 </div>
 <br><br>
+</body>
+</html>

@@ -10,7 +10,8 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"></script>
-    <script src="../scripts/addBtnForm.js"></script>
+    <script src="../scripts/addBtnUserForm.js"></script>
+    <script src="../scripts/addBtnOrgForm.js"></script>
     <link rel="stylesheet" type="text/css" href="../styles/Admin.css">
     <meta charset="UTF-8">
 
@@ -113,7 +114,7 @@ session_start();
             <div class="col-md-12">
                 <h3>Χρήστες</h3>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
-
+                    <form method="post" action='../phpFiles/addbuttonUser.php' id="user_add_form"></form>
                     <table class="table table-bordered table-striped mb-0">
                         <thead>
                         <tr>
@@ -165,19 +166,23 @@ session_start();
                         }
                         $conn->close();
                         ?>
-                        <tr id="add_row">
-
-                        </tr>
+                        <tr id="add_row"></tr>
                         </tbody>
                     </table>
 
                 </div>
-                <button onclick="addForm()" type="button" class="btn btn-primary">Προσθήκη Χρήστη</button>
+                <?php
+                if (isset($_SESSION['add_error'])) {
+                    echo $_SESSION['add_error'];
+                }
+                unset($_SESSION['add_error']);
+                ?>
+                <button onclick="addUserForm()" type="button" class="btn btn-primary">Προσθήκη Χρήστη</button>
             </div>
             <div class="col-md-12">
                 <h3>Οργανισμοί</h3>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
-
+                    <form method="post" action='../phpFiles/addbuttonOrg.php' id="org_add_form"></form>
                     <table class="table table-bordered table-striped mb-0">
                         <thead>
                         <tr>
@@ -225,12 +230,12 @@ session_start();
                         }
                         $conn->close();
                         ?>
-
+                        <tr id="add_org_row"></tr>
                         </tbody>
                     </table>
 
                 </div>
-                <button type="button" class="btn btn-primary">Προσθήκη Οργανισμού</button>
+                <button onclick="addOrgForm()" type="button" class="btn btn-primary">Προσθήκη Οργανισμού</button>
             </div>
 
         </div>

@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 */;
+CREATE DATABASE  IF NOT EXISTS `database_structure` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016  */;
 USE `database_structure`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
@@ -30,7 +30,7 @@ CREATE TABLE `emails` (
   `content` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `emails_id_uindex` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,14 +52,13 @@ DROP TABLE IF EXISTS `organizationdata`;
 CREATE TABLE `organizationdata` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(35) NOT NULL,
-  `imagePath` varchar(70) NOT NULL,
-  `description_GR` text NOT NULL,
-  `description_EN` text NOT NULL,
-  `url` varchar(50) NOT NULL,
+  `imagePath` varchar(70) DEFAULT NULL,
+  `description_GR` text,
+  `description_EN` text,
+  `url` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `OrganizationData_id_uindex` (`id`),
-  UNIQUE KEY `organizationData_imagePath_uindex` (`imagePath`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `OrganizationData_id_uindex` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +88,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_uindex` (`email`),
   UNIQUE KEY `users_name_uindex` (`name`),
   UNIQUE KEY `users_id_uindex` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +97,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','admin1234','admin@helpinghand.com','Hi, I am helping hand\'s administrator!');
+INSERT INTO `users` VALUES (11,'admin','admin1234','admin@helpinghand.com','Hi, I am helping hand\'s administrator!');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,6 +114,4 @@ CREATE USER IF NOT EXISTS 'admin'@'localhost' IDENTIFIED WITH mysql_native_passw
 GRANT ALL PRIVILEGES ON database_structure.* TO 'admin'@'localhost';
 CREATE USER IF NOT EXISTS 'app'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
 GRANT SELECT,INSERT,UPDATE,DELETE ON database_structure.* TO 'app'@'localhost';
-
-
--- Dump completed on 2021-06-13 19:58:47
+-- Dump completed on 2021-06-14  7:17:13

@@ -13,6 +13,8 @@ session_start();
             crossorigin="anonymous"></script>
     <script src="../scripts/addBtnUserForm.js"></script>
     <script src="../scripts/addBtnOrgForm.js"></script>
+    <script src="../scripts/UserPage.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../styles/Admin.css">
     <meta charset="UTF-8">
 
@@ -75,7 +77,7 @@ session_start();
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div id="user_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['username'] ?>
                             </div>
                         </div>
@@ -84,7 +86,7 @@ session_start();
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div id ="email_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['email'] ?>
                             </div>
                         </div>
@@ -93,14 +95,17 @@ session_start();
                             <div class="col-sm-3">
                                 <h6 type="password" class="mb-0">Κωδικός Πρόσβασης</h6>
                             </div>
-                            <div class="col-sm-9 text-secondary">
+                            <div id="pass_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['password'] ?>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button type=submit class="btn btn-success" id="text2">Επεξεργασία</button>
+                                <button onclick="editInputField()" type=submit class="btn btn-success" id="edit">Επεξεργασία</button>
+                                    <button type="submit" class="btn btn-success" id="savebtn" form="edit_user" disabled>Αποθήκευση Αλλαγών
+                                                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -309,6 +314,10 @@ session_start();
 
                 </div>
             </div>
+            <div class="col-md-12">
+             <button type=button class="btn btn-danger">Αποσύνδεση</button>
+              <button type=button class="btn btn-danger">Διαγραφή Λογαριασμού</button>
+              </div>
 
         </div>
     </div>

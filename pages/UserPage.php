@@ -61,7 +61,7 @@ session_start();
                         <form method="post" action="../phpScripts/updateUser.php" id="edit_user"></form>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Όνομα Χρήστη</h6>
+                                <h6 class="mb-0" id="text1"></h6>
                             </div>
                             <div id="user_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['username'] ?>
@@ -80,7 +80,7 @@ session_start();
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 type="password" class="mb-0">Κωδικός Πρόσβασης</h6>
+                                <h6 type="password" class="mb-0" id="text2">/h6>
                             </div>
                             <div id="pass_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['password'] ?>
@@ -89,12 +89,8 @@ session_start();
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit">
-                                    Επεξεργασία
-                                </button>
-                                <button type="submit" class="btn btn-success" id="savebtn" form="edit_user" disabled>
-                                    Αποθήκευση Αλλαγών
-                                </button>
+                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit"></button>
+                                <button type="submit" class="btn btn-success" id="savebtn" form="edit_user" disabled>Αποθήκευση Αλλαγών</button>
                             </div>
                         </div>
                     </div>
@@ -102,7 +98,7 @@ session_start();
 
             </div>
             <div class="col-md-8">
-                <h4>Περιγραφή</h4>
+                <h4 id="text3">Περιγραφή</h4>
                 <label id="text1" for="exampleFormControlTextarea1" class="form-label"></label>
                 <div id="description">
                     <label><?php echo $_SESSION['about'] ?></label>
@@ -111,9 +107,8 @@ session_start();
             </div>
             <div class="col-md-12">
                 <form method="post" action="../phpScripts/deleteUser.php" id="del_form">
-                    <button onclick="disconnect(1)" type=button class="btn btn-danger">Αποσύνδεση</button>
-                    <button onclick="disconnect(2)" id="del" type=button class="btn btn-danger">Διαγραφή Λογαριασμού
-                    </button>
+                    <button onclick="disconnect(1)" id="disco" type=button class="btn btn-danger"></button>
+                    <button onclick="disconnect(2)" id="del" type=button class="btn btn-danger"></button>
                 </form>
             </div>
 
@@ -146,12 +141,16 @@ session_start();
 
     </div>
 </div>
-</div>
-</body>
+
+<script>
+    checkLanguageText();
+</script>
+
 <br><br>
 
 <?php include('../phpScripts/footer.php'); ?>
-<script>trans_navbar()</script>
+<script>checkLanguageText();
+    trans_navbar()</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
@@ -160,5 +159,4 @@ session_start();
 
 </body>
 </html>
-</body>
-</html>
+

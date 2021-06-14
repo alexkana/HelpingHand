@@ -1,5 +1,5 @@
 function checkLanguageText() {
-    let text1, text2, text3, text4, text5, text6,i1,i2,i3,i4,i5,nav,social;
+    let text1, text2,i1,i2,i3,i4,i5,nav,social;
     if (sessionStorage.getItem('language') === 'en') {
         text1 = "Text :";
         text2 = "Send";

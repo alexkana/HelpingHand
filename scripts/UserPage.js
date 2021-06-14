@@ -1,4 +1,4 @@
-function editInputField(){
+function editInputField() {
     let user_value = document.getElementById("user_field").innerText;
     let email_value = document.getElementById("email_field").innerText;
     let pass_value = document.getElementById("pass_field").innerText;
@@ -17,4 +17,35 @@ function editInputField(){
     document.getElementById("description").innerHTML = "<input id='input4' type='text' name='desc' form='edit_user'>";
     document.getElementById("input4").value = desc_value;
 }
+
+function checkLanguageText() {
+    let text1, text2, text3,text4,text5,text6,text7;
+    if (sessionStorage.getItem('language') === 'en') {
+        text1 = "User name";
+        text2 = "password";
+        text3 = "Description";
+        text4 = "Disconnect";
+        text5 = "Delete Account";
+        text6 = "Edit"
+        text7 = "Save changes"
+    } else {
+        text1 = "Όνομα Χρήστη";
+        text2 = "Κωδικός Πρόσβασης";
+        text3 = "Περιγραφή";
+        text4 = "Αποσύνδεση";
+        text5 = "Διαγραφή Λογαριασμού";
+        text6 = "Επεξεργασία";
+        text7 = "Αποθήκευση Αλλαγών";
+    }
+
+    document.getElementById("text1").innerHTML = text1;
+    document.getElementById("text2").innerHTML = text2;
+    document.getElementById("text3").innerHTML = text3;
+    document.getElementById("disco").innerHTML = text4;
+    document.getElementById("del").innerHTML = text5;
+    document.getElementById("edit").innerHTML = text6;
+    document.getElementById("savebtn").innerHTML = text7;
+
+}
+
 

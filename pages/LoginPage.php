@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_POST['login1'])) {
     global $conn;
-    include("../phpFiles/dbconnect.php5");
+    include("../phpScripts/dbconnect.php5");
     $username = $_POST['login1'];
     $email = $_POST['login2'];
     $password = $_POST['password1'];
@@ -18,7 +18,12 @@ if (isset($_POST['login1'])) {
 
         $conn->close();
         session_write_close();
-        header("Location: ../pages/mainpage.php");
+
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['email'] = $email;
+        $_SESSION['about'] = 'Hi !';
+        header("Location: ../pages/UserPage.php");
         exit;
     }
     $conn->close();
@@ -37,6 +42,7 @@ if (isset($_POST['login3'])) {
     if (!empty($res) && $res->num_rows > 0) {
         unset($_SESSION['login_error']);
         $record = $res->fetch_assoc();
+        $_SESSION['id'] = $record['id'];
         $_SESSION['username'] = $record['name'];
         $_SESSION['password'] = $record['password'];
         $_SESSION['email'] = $record['email'];
@@ -44,7 +50,7 @@ if (isset($_POST['login3'])) {
         if ($_SESSION['username'] == 'admin') {
             header("Location: ../pages/Admin.php");
         } else {
-            header("Location: ../pages/mainpage.php");
+            header("Location: ../pages/Userpage.php");
         }
 
         exit;

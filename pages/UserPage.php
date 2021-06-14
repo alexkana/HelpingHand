@@ -110,10 +110,19 @@ session_start();
             </div>
             <div class="col-md-12">
                 <form method="post" action="../phpScripts/deleteUser.php" id="del_form">
-                <button type=button class="btn btn-danger">Αποσύνδεση</button>
+                <button onclick="disconnect()" type=button class="btn btn-danger">Αποσύνδεση</button>
                 <button type=submit class="btn btn-danger" form="del_form">Διαγραφή Λογαριασμού</button>
                 </form>
             </div>
+
+            <script>
+                function disconnect() {
+                    window.location = 'mainpage.php'
+                    document.getElementById("item6").style.display = "none";
+                    document.getElementById("item5").style.display = "block";
+                    sessionStorage.setItem("showProfile","false");
+                }
+            </script>
 
         </div>
 

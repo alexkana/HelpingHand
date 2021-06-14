@@ -13,7 +13,6 @@ if (isset($_POST['login1'])) {
     if ($conn->query($sql_query) == false) {
         $_SESSION['sign_up_error'] = '<p style="color:red;" >A user with this name or email already exists!</p>';
     } else {
-        $_SESSION['sign_up_error'] = '<p>Account created &#9989;</p>';
 
         unset($_SESSION['login_error']);
 

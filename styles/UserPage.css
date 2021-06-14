@@ -1,18 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 * {
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
 }
+
+.jumbotron {
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+
+
+#form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    height: 50%;
+}
+
 
 .navbar {
     padding: 1.1rem;
     background-color: white !important;
 }
 
-
 .nav-link {
     margin: 1.1em;
     font-size: 1.2em;
     font-weight: 400;
+}
+
+.carousel-fade .carousel-item, .carousel-item img {
+    max-height: 95vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%)
+}
+
+.rect{
+    border: 1em red;
+    border-radius: 1.25em;
+    box-shadow: rgb(14, 0, 0) 0px 4px 12px;
+
+    text-align:center;
+    background: linear-gradient(to right, #ad1124, #2b0707);
+
+    width:auto;
+    height:auto;
+    line-height:40px;
+    color:white;
+    margin:20px auto;
+    padding: 5px 30px 5px 30px;
+    position:relative;
+    float:left
+
+}
+
+.img-fluid{
+    border: 1em ;
+    border-radius: 1.1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+.header_font{
+    font-weight:600;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+
+.flag_icon{
+    height: 32px;
+    width: 32px;
+}
+
+.shadow p-3 mb-5 bg-white rounded{
+    border-radius: 1.2em;
+
+}
+.footerlinks{
+    margin-bottom:25px;
+    text-align: center;
+
+}
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 2px;
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-facebook {
+    background: rgba(59, 89, 152, 0.99);
+    color: white;
+}
+
+.fa-twitter {
+    background: rgba(85, 172, 238, 0.97);
+    color: white;
+}
+
+.fa-instagram {
+    background: rgba(248, 143, 114, 0.73);
+    color: white;
+}
+
+.fa-google{
+    background: goldenrod;
+    color: white;
+}
+
+.fa-pinterest {
+    background: rgba(203, 32, 39, 0.89);
+    color: white;
+}
+
+
+
+.fa-phone{
+    color: white;
+}
+
+
+
+.bi bi-heart:before {
+    content: "\f55a";
+}
+
+
+.carousel-control-prev-icon {
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+
 }

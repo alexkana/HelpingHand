@@ -21,7 +21,6 @@ session_start();
     <script type="text/javascript" src="../scripts/script.js"></script>
     <script type="text/javascript" src="../scripts/UserPage.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../styles/style.css">
 
     <meta charset="UTF-8">
 

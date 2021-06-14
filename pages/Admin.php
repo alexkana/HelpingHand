@@ -116,7 +116,7 @@ session_start();
             <div class="col-md-12">
                 <h3>Χρήστες</h3>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                    <form method="post" action='../phpFiles/addbuttonUser.php' id="user_add_form"></form>
+                    <form method="post" action='../phpScripts/addbuttonUser.php' id="user_add_form"></form>
                     <table class="table table-bordered table-striped mb-0">
                         <thead>
                         <tr>
@@ -159,7 +159,7 @@ session_start();
                             <td>' . $name . '</td>
                             <td>' . $email . '</td>
                             <td>' . $password . '</td>
-                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=users" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><form method="post" action="../phpScripts/delbutton.php?id=' . $id . '&table=users" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }
                             } else {
@@ -184,7 +184,7 @@ session_start();
             <div class="col-md-12">
                 <h3>Οργανισμοί</h3>
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                    <form method="post" action='../phpFiles/addbuttonOrg.php' id="org_add_form"></form>
+                    <form method="post" action='../phpScripts/addbuttonOrg.php' id="org_add_form"></form>
                     <table class="table table-bordered table-striped mb-0">
                         <thead>
                         <tr>
@@ -234,7 +234,7 @@ session_start();
                             <td>' . $img_url . '</td>
                             <td><div class = "crop">' . $description_Greek . '</div></td>
                             <td><div class="crop">' . $description_English . '</div></td>
-                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=organizationdata" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><form method="post" action="../phpScripts/delbutton.php?id=' . $id . '&table=organizationdata" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }
                             } else {
@@ -293,7 +293,7 @@ session_start();
                             <th scope="row">' . $id . '</th>
                             <td>' . $from . '</td>
                             <td>' . $content . '</td>
-                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=emails" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><form method="post" action="../phpScripts/delbutton.php?id=' . $id . '&table=emails" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
                             <td><a target="_blank" class="btn btn-success" type="submit" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to='.$from.'">Απάντηση</a></td>
           
                         </tr>';

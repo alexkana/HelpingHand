@@ -24,10 +24,15 @@
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
 
     <title>A Helping Hand</title>
+
 </head>
 <body style="background-color:whitesmoke">
 
 <?php include('../phpScripts/navbar.php'); ?>
+<script>
+    document.getElementById("item1").className = "nav-link active";
+</script>
+
 
 <div id="slider">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -231,5 +236,3 @@
 </body>
 
 </html>
-
-           

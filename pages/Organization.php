@@ -29,7 +29,63 @@
 </head>
 <body>
 
-<?php include('../phpScripts/navbar.php'); ?>
+<section id="nav">
+    <div id="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
+                                                      class="d-inline-block align-top"
+                                                      onclick="window.location = 'mainpage.html'" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a id="item1" class="nav-link" aria-current="page" href="mainpage.php">Αρχική
+                                Σελίδα</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="item2" class="nav-link" href="AboutUs.php">Σχετικά με εμάς</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="item3" class="nav-link" href="Organization.php">Οργανώσεις</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="item4" class="nav-link" href="contact.php">Επικοινωνία</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="item5" class="nav-link" href="LoginPage.php">Εγγραφή/Σύνδεση</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="lang_selector" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a onclick="sessionStorage.setItem('language','el');location.reload();trans_navbar()"
+                                   href="#" class="dropdown-item">
+                                    <img class="flag_icon" src="../images/flag-icons/greece.png" alt="">&nbsp Ελληνικά
+                                </a>
+                                <a onclick="sessionStorage.setItem('language','en');location.reload(); trans_navbar()"
+                                   href="#"
+                                   class="dropdown-item">
+                                    <img class="flag_icon" src="../images/flag-icons/united-states.png" alt="">&nbsp
+                                    English
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+            document.getElementById("item3").className = "nav-link active";
+        </script>
+    </div>
+
+</section>
 
 
 

@@ -27,6 +27,10 @@
 <body>
 
 <?php include('../phpScripts/navbar.php')?>
+
+<script>
+    document.getElementById("item4").className = "nav-link active";
+</script>
 <div class="container">
     <section id="form">
         <form action="../phpFiles/send_email.php5" method=post>

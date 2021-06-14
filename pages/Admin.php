@@ -26,7 +26,8 @@ session_start();
     <div id="navigation">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px" class="d-inline-block align-top" alt=""></a>
+                <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
+                                                      class="d-inline-block align-top" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,9 +38,7 @@ session_start();
                         <li class="nav-item">
                             <a id="item1" class="nav-link" aria-current="page" href="mainpage.php"></a>
                         </li>
-                        <li class="nav-item">
-                            <button onclick="window.location = 'mainpage.php'" type="button" class="btn btn-danger">Αποσύνδεση</button>
-                        </li>
+
                     </ul>
 
                 </div>
@@ -87,7 +86,7 @@ session_start();
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Email</h6>
                             </div>
-                            <div id ="email_field" class="col-sm-9 text-secondary">
+                            <div id="email_field" class="col-sm-9 text-secondary">
                                 <?php echo $_SESSION['email'] ?>
                             </div>
                         </div>
@@ -103,9 +102,12 @@ session_start();
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button onclick="editInputField()" type=submit class="btn btn-success" id="edit">Επεξεργασία</button>
-                                    <button type="submit" class="btn btn-success" id="savebtn" form="edit_user" disabled>Αποθήκευση Αλλαγών
-                                                                </button>
+                                <button onclick="editInputField()" type=submit class="btn btn-success" id="edit">
+                                    Επεξεργασία
+                                </button>
+                                <button type="submit" class="btn btn-success" id="savebtn" form="edit_user" disabled>
+                                    Αποθήκευση Αλλαγών
+                                </button>
 
                             </div>
                         </div>
@@ -300,7 +302,7 @@ session_start();
                             <td>' . $from . '</td>
                             <td>' . $content . '</td>
                             <td><form method="post" action="../phpScripts/delbutton.php?id=' . $id . '&table=emails" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
-                            <td><a target="_blank" class="btn btn-success" type="submit" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to='.$from.'">Απάντηση</a></td>
+                            <td><a target="_blank" class="btn btn-success" type="submit" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=' . $from . '">Απάντηση</a></td>
           
                         </tr>';
                                 }
@@ -316,9 +318,16 @@ session_start();
                 </div>
             </div>
             <div class="col-md-12">
-             <button type=button class="btn btn-danger">Αποσύνδεση</button>
-              <button type=button class="btn btn-danger">Διαγραφή Λογαριασμού</button>
-              </div>
+                <button onclick="disconnect()" type="button" class="btn btn-danger">Αποσύνδεση</button>
+            </div>
+
+            <script>
+                function disconnect() {
+                    if (confirm('Are you sure you want to disconnect ?')) {
+                       window.location = 'mainpage.php';
+                    }
+                }
+            </script>
 
         </div>
     </div>

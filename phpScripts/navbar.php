@@ -49,31 +49,17 @@ echo '<div id="navigation">
     
     <script>
     
-        console.log("before");
- 
+       
      if(sessionStorage.getItem("showProfile") === null || sessionStorage.getItem("showProfile") === "false"){
-         console.log("should be hidden")
           document.getElementById("item6").style.display = "none";
-         document.getElementById("item5").style.display = "block";
-        sessionStorage.setItem("showProfile","false");
+          document.getElementById("item5").style.display = "block";
+          sessionStorage.setItem("showProfile","false");
     }else if(sessionStorage.getItem("showProfile") === "true"){
-         document.getElementById("item6").style.display = "block";
-         document.getElementById("item5").style.display = "none";
-        console.log("Should be visible")
+          document.getElementById("item6").style.display = "block";
+          document.getElementById("item5").style.display = "none";
     }
     
     
-    
-
-//    console.log("before");
-// 
-//     if(sessionStorage.getItem("myvariable") === null){
-//         console.log("inside")
-//          document.getElementById("item6").style.display = "none";
-//        sessionStorage.setItem("myvariable","1");
-//    }else if(sessionStorage.getItem("myvariable") === "1"){
-//        console.log("more than once")
-//    }
 
     </script>
 

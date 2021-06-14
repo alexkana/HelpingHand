@@ -147,9 +147,7 @@ if (isset($_POST['login3'])) {
                           placeholder="Email ή όνομα χρήστη"></p>
                 <p><input type="password" id="password3" class="fadeIn third" required name="password3"
                           placeholder="Κωδικός πρόσβασης"></p>
-                <div id="formFooter1">
-                    <a class="underlineHover" href="#" id="text5" name="text5"></a>
-                </div>
+
                 <p>
                     <button type=submit class="btn btn-success" id="text4" name="text4">Σύνδεση</button>
                 </p>

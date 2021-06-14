@@ -215,9 +215,9 @@
         <div class="col-lg-12 col-md-12">
             <div style="text-align: center;">
                 <p id="btn_sec_p1"></p>
-                <button id="btn_sec_1" onclick="location.href = 'Organization.html' " type="button" class="btn btn-3 btn-sep bi bi-heart"></button>
+                <button id="btn_sec_1" onclick="location.href = 'Organization.php' " type="button" class="btn btn-3 btn-sep bi bi-heart"></button>
                 <p id="btn_sec_p2"> </p>
-                <button id="btn_sec_2" onclick="location.href = 'LoginPage.html' " type="button" class="btn btn-3 btn-sep bi bi-heart"></button>
+                <button id="btn_sec_2" onclick="location.href = 'LoginPage.php' " type="button" class="btn btn-3 btn-sep bi bi-heart"></button>
 
             </div>
         </div>

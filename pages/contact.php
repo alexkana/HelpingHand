@@ -33,7 +33,7 @@
 </script>
 <div class="container">
     <section id="form">
-        <form action="../phpFiles/send_email.php5" method=post>
+        <form action="../phpScripts/send_email.php5" method=post>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email :</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required name="user_email">

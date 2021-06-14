@@ -14,8 +14,6 @@ session_start();
             crossorigin="anonymous"></script>
 
 
-
-
     <link rel="stylesheet" type="text/css" href="../styles/UserPage.css">
     <link rel="icon" href="../images/logo.png">
     <script type="text/javascript" src="../scripts/script.js"></script>
@@ -29,11 +27,11 @@ session_start();
 </head>
 <body>
 
-<?php include('../phpScripts/navbar.php')?>
+<?php include('../phpScripts/navbar.php') ?>
 
 <script>
     document.getElementById("item6").className = "nav-link active";
-    sessionStorage.setItem("showProfile","true");
+    sessionStorage.setItem("showProfile", "true");
     document.getElementById("item6").style.display = "block";
     document.getElementById("item5").style.display = "none";
 </script>
@@ -59,9 +57,7 @@ session_start();
             <div class="col-md-8">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <?php
-                          echo '<form method="post" action="../phpScripts/updateUser.php?id='.$_SESSION["id"].'" id="edit_user">'
-                                                ?>
+                        <form method="post" action="../phpScripts/updateUser.php" id="edit_user"></form>
                         <div class="row">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>
@@ -92,13 +88,14 @@ session_start();
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit">Επεξεργασία</button>
-                               <button type="submit" class="btn btn-success" id="savebtn" disabled>Αποθήκευση Αλλαγών</button>
+                                <button onclick="editInputField()" type=button class="btn btn-success" id="edit">
+                                    Επεξεργασία
+                                </button>
+                                <button type="submit" class="btn btn-success" id="savebtn" form="edit_user" disabled>
+                                    Αποθήκευση Αλλαγών
+                                </button>
                             </div>
                         </div>
-                      <?php
-                       echo '</form>'
-                        ?>
                     </div>
                 </div>
 
@@ -110,16 +107,17 @@ session_start();
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
                           name="message"><?php echo $_SESSION['about'] ?></textarea>
                 </div>
+                <br><br>
             </div>
-             <div class="col-md-12">
-                            <button type=button class="btn btn-danger"  >Αποσύνδεση</button>
-                            <button type=button class="btn btn-danger" >Διαγραφή Λογαριασμού</button>
-                        </div>
-
+            <div class="col-md-12">
+                <button type=button class="btn btn-danger">Αποσύνδεση</button>
+                <button type=button class="btn btn-danger">Διαγραφή Λογαριασμού</button>
             </div>
 
         </div>
+
     </div>
+</div>
 </div>
 </body>
 <br><br>

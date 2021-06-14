@@ -18,11 +18,10 @@ if (isset($_POST['login1'])) {
 
         $conn->close();
         session_write_close();
-
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
         $_SESSION['email'] = $email;
-        $_SESSION['about'] = 'Hi !';
+        $_SESSION['about'] = '';
 
         header("Location: ../pages/UserPage.php");
         exit;
@@ -37,7 +36,7 @@ if (isset($_POST['login3'])) {
     include("../phpScripts/dbconnect.php5");
     $username = $_POST['login3'];
     $password = $_POST['password3'];
-    $sql_query = "SELECT name,password,email,about FROM users WHERE name = '$username' AND password = '$password'";
+    $sql_query = "SELECT * FROM users WHERE name = '$username' AND password = '$password'";
     $res = $conn->query($sql_query);
     $conn->close();
     if (!empty($res) && $res->num_rows > 0) {

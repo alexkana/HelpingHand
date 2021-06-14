@@ -35,7 +35,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="../images/logo.png" heigth="90px" width="90px"
                                                       class="d-inline-block align-top"
-                                                      onclick="window.location = 'mainpage.html'" alt=""></a>
+                                                      onclick="window.location = 'mainpage.php'" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

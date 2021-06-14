@@ -14,8 +14,7 @@ function editInputField(){
     document.getElementById("input2").value = email_value;
     document.getElementById("pass_field").innerHTML = "<input id='input3' style='border:none' type='text' required name='pass' form='edit_user' >";
     document.getElementById("input3").value = pass_value;
-    document.getElementById("description").innerHTML = "<input id='input4' style='border:none' type='text' name='desc' form='edit_user'>";
+    document.getElementById("description").innerHTML = "<input id='input4' type='text' name='desc' form='edit_user'>";
     document.getElementById("input4").value = desc_value;
-
 }
 

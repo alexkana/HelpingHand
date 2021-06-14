@@ -6,7 +6,7 @@ $username = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST['pass'];
 $about = $_POST['desc'];
-$id = $_GET['id'];
+$id = $_SESSION['id'];
 $sql_query = "UPDATE users SET name='$username',password='$password',email='$email',about='$about' WHERE id='$id'";
 if ($conn->query($sql_query) === false) {
     echo "Error: " . $sql_query . "<br>" . $conn->error;

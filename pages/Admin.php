@@ -16,6 +16,7 @@ session_start();
     <meta charset="UTF-8">
 
     <title>Title</title>
+
 </head>
 <body>
 <section id="nav">
@@ -59,7 +60,7 @@ session_start();
                                  class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <p></p>
-                                <?php echo '<h4>'.$_SESSION['username'].'</h4>'?>
+                                <?php echo '<h4>' . $_SESSION['username'] . '</h4>' ?>
                             </div>
                         </div>
                     </div>
@@ -74,7 +75,7 @@ session_start();
                                 <h6 class="mb-0">Όνομα Χρήστη</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <?php echo $_SESSION['username']?>
+                                <?php echo $_SESSION['username'] ?>
                             </div>
                         </div>
                         <hr>
@@ -83,7 +84,7 @@ session_start();
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <?php echo $_SESSION['email']?>
+                                <?php echo $_SESSION['email'] ?>
                             </div>
                         </div>
                         <hr>
@@ -92,7 +93,7 @@ session_start();
                                 <h6 type="password" class="mb-0">Κωδικός Πρόσβασης</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <?php echo $_SESSION['password']?>
+                                <?php echo $_SESSION['password'] ?>
                             </div>
                         </div>
                         <hr>
@@ -109,7 +110,7 @@ session_start();
                 <h4>Περιγραφή</h4>
                 <label id="text1" for="exampleFormControlTextarea1" class="form-label"></label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required
-                          name="message"><?php echo $_SESSION['about']?></textarea>
+                          name="message"><?php echo $_SESSION['about'] ?></textarea>
             </div>
             <div class="col-md-12">
                 <h3>Χρήστες</h3>
@@ -149,15 +150,15 @@ session_start();
                                     $name = $row["name"];
                                     $password = $row["password"];
                                     $email = $row['email'];
-                                    $counter+= 1;
+                                    $counter += 1;
                                     $id = $row['id'];
-                                    $form_id = $id."form";
+                                    $form_id = $id . "form";
                                     echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $name . '</td>
                             <td>' . $email . '</td>
                             <td>' . $password . '</td>
-                            <td><form method="post" action="../phpFiles/delbutton.php?id='.$id.'&table=users" id="'.$form_id.'"><button type="submit" form="'.$form_id.'" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=users" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }
                             } else {
@@ -190,12 +191,14 @@ session_start();
                             <th scope="col">Όργανισμός</th>
                             <th scope="col">Ιστοσελίδα</th>
                             <th scope="col">Εικόνα</th>
-                            <th scope="col">Περιγραφή (Gr)</th>
-                            <th scope="col">Περιγραφή (En)</th>
+                            <th scope="col" class="desc_Gr">Περιγραφή (Gr)</th>
+                            <th scope="col" id="desc_En">Περιγραφή (En)</th>
                             <th scope="col">Διαγραφή</th>
                         </tr>
                         </thead>
                         <tbody>
+
+
                         <?php
                         $host = "localhost";
                         $db = "database_structure";
@@ -221,16 +224,16 @@ session_start();
                                     $img_url = $row['imagePath'];
                                     $description_Greek = $row['description_GR'];
                                     $description_English = $row['description_EN'];
-                                    $counter+= 1;
-                                    $form_id = $id."orgform";
+                                    $counter += 1;
+                                    $form_id = $id . "orgform";
                                     echo '<tr>
                             <th scope="row">' . $counter . '</th>
                             <td>' . $title . '</td>
                             <td>' . $url . '</td>
                             <td>' . $img_url . '</td>
-                            <td>' . $description_Greek . '</td>
-                            <td>' . $description_English . '</td>
-                            <td><form method="post" action="../phpFiles/delbutton.php?id='.$id.'&table=organizationdata" id="'.$form_id.'"><button type="submit" form="'.$form_id.'" class="btn btn-danger">Διαγραφή</button></form></td>
+                            <td><div class = "crop">' . $description_Greek . '</div></td>
+                            <td><div class="crop">' . $description_English . '</div></td>
+                            <td><form method="post" action="../phpFiles/delbutton.php?id=' . $id . '&table=organizationdata" id="' . $form_id . '"><button type="submit" form="' . $form_id . '" class="btn btn-danger">Διαγραφή</button></form></td>
                         </tr>';
                                 }
                             } else {

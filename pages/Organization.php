@@ -28,7 +28,6 @@
     <title>A Helping Hand</title>
 </head>
 <body>
-
 <section id="nav">
     <div id="navigation">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,7 +104,7 @@
 </script>
 
 <div class="col-lg-12 text-center mt-5">
-    <h3>Αναζήτηση οργανισμών</h3>
+    <h3 id="search_bar_title"></h3>
 </div>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="search_bar"></form>
 <div class="col-md-4 offset-md-4 mt-5 ">
@@ -118,6 +117,7 @@
 
     </div>
 </div>
+
 
 <?php
 $host = "localhost";

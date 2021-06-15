@@ -26,7 +26,7 @@ echo '<footer class="bg-dark text-center text-lg-start" id="fo" >
                <small class="text-white" >(+30) 6947483***</small>
                  <a><a/>&nbsp;&nbsp;&nbsp;&nbsp;<a><a/>
          
-                <a id="emailText" class="text-white" style="text-decoration:none"  href = "mailto: helpinghandauth@gmail.com"><small>helpinghandauth@gmail.com</small></a>
+                <a id="emailText" class="text-white"   href = "mailto: helpinghandauth@gmail.com"><small>helpinghandauth@gmail.com</small></a>
             </div>
             
             
@@ -39,7 +39,7 @@ echo '<footer class="bg-dark text-center text-lg-start" id="fo" >
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: whitesmoke">
         © 2021 Copyright:
-        <a class="text-white" href="">helpingHand.com</a>
+        <a class="text-white" >helpingHand.com</a>
     </div>
     <!-- Copyright -->
 </footer>';

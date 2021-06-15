@@ -48,11 +48,6 @@
         </form>
     </section>
 
-
-
-    <script>
-        checkLanguageText();
-    </script>
 </div>
 
 <!-- Footer -->

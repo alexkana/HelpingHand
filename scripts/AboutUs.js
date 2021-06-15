@@ -1,5 +1,5 @@
 function checkLanguageText() {
-    let title_text, text1, text2, text3, text4, text5, text6,i1,i2,i3,i4,i5,nav,social;
+    let title_text, text1, text2, text3, text4, text5, text6,social;
     if (sessionStorage.getItem('language') === 'en') {
         title_text = "About us";
         text1 = "The website \"Helping Hand\" is a project undertaken by a group of 4 students of the Department of Informatics of AUTh. " +
@@ -18,12 +18,7 @@ function checkLanguageText() {
             "to offer solutions to key problems they face and to shape a fair world with equal opportunities for all.\n";
         text6 = "We invite you to contribute to our project by registering on our website and becoming an active member of our effort." +
             " Together we can lay the foundations to shape a better world!\n";
-        i1 = 'Home page'
-        i2 = 'About us'
-        i3 = 'Organizations'
-        i4 = 'Contact'
-        i5 = 'Sign-Up/Log-in'
-        nav = 'Navigation'
+
         social ='Social Media'
 
     } else {
@@ -56,12 +51,7 @@ function checkLanguageText() {
         text6 = "Σας καλούμε να συνδράμετε στο έργο μας με το να πραγματοποίησετε εγγραφή στον ιστότοπο μας και να γίνετε\n" +
             "                ενεργά μέλη της προσπάθειας μας.Μαζί μπορούμε να τοποθετήσουμε τα θεμέλια για να διαμορφώσουμε ένα\n" +
             "                καλύτερο κόσμο!";
-        i1 = 'Αρχική Σελίδα'
-        i2 = 'Σχετικά με εμάς'
-        i3 = 'Οργανισμοί'
-        i4 = 'Επικοινωνία'
-        i5 = 'Εγγραφή/Σύνδεση'
-        nav = 'Πλοήγηση'
+
         social = 'Κοινωνικά Δίκτυα'
     }
     document.getElementById("title_text").innerHTML = title_text;
@@ -71,11 +61,5 @@ function checkLanguageText() {
     document.getElementById("text4").innerHTML = text4;
     document.getElementById("text5").innerHTML = text5;
     document.getElementById("text6").innerHTML = text6;
-    document.getElementById("footer1").textContent = i1;
-    document.getElementById("footer2").textContent = i2;
-    document.getElementById("footer3").textContent = i3;
-    document.getElementById("footer4").textContent = i4;
-    document.getElementById("footer5").textContent = i5;
-    document.getElementById("list_title").innerHTML = nav;
     document.getElementById("social").innerHTML = social;
 }

@@ -11,32 +11,7 @@ echo '<footer class="bg-dark text-center text-lg-start" id="fo" >
             </div>
             <!--Grid column-->
             <!--Grid column-->
-            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                <center>
-                    <ul class="list-unstyled">
-                        <li class="footerlinks">
-                            <p id="list_title" style="color:whitesmoke" >Πλοήγηση</p>
-                        </li>
-                        <li class="footerlinks">
-                            <a id ="footer1"  style="color:whitesmoke" href="../pages/mainpage.php">Αρχική Σελίδα</a>
-                        </li>
-                        <li class="footerlinks">
-                            <a id ="footer2" style="color:whitesmoke" href="../pages/AboutUs.php">Σχετικά με εμάς</a>
-                        </li>
-
-                        <li class="footerlinks">
-                            <a id="footer3" style="color:whitesmoke" href="../pages/Organization.php">Οργανισμοί</a>
-                        </li>
-                        <li class="footerlinks">
-                            <a id="footer4" style="color:whitesmoke" href="../pages/contact.php">Επικοινωνία</a>
-                        </li>
-                        <li class="footerlinks">
-                            <a id="footer5" class="footerlinks" style="color:whitesmoke" href="../pages/LoginPage.php">Εγγραφή/Σύνδεση</a>
-                        </li>
-
-                    </ul>
-                </center>
-            </div>
+          
 
 
             <!--Grid column-->

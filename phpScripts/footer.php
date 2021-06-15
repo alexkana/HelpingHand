@@ -1,9 +1,9 @@
 <?php
-echo '<footer class="bg-dark text-center text-lg-start">
+echo '<footer class="bg-dark text-center text-lg-start" id="fo" >
     <!-- Grid container -->
-    <div class="container p-4">
+    <div class="container p-4" >
         <!--Grid row-->
-        <div class="row">
+        <div class="row" >
             <!--Grid column-->
             <div class="col-lg-6 col-md-4 mb-4 mb-md-0">
                 <p id="footer_msg" style="color: whitesmoke"></p>

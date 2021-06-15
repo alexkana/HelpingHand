@@ -13,6 +13,22 @@
 
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+
+#fo {
+
+    background-color: grey;
+    display: table-row;
+    height: 0;
+
+}
+
 
 #form {
     margin-top: 50px;

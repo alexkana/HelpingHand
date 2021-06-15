@@ -1,5 +1,5 @@
 function checkLanguageText() {
-    let text1, text2, text3, text4, login1, password1, password2, login3,social;
+    let text1, text2, text3, text4, login1, password1, password2, login3;
     if (sessionStorage.getItem('language') === 'en') {
         text1 = "Register by filling in the following information! ";
         text2 = "Sign up";
@@ -9,7 +9,6 @@ function checkLanguageText() {
         login3 = "Email or user name";
         password1 = "Password";
         password2 = "Confirm password";
-        social ='Social Media'
     } else {
         text1 = "Κάνε εγγραφή συμπληρώνοντας τα παρακάτω στοιχεία!";
         text2 = "Εγγραφη";
@@ -19,7 +18,6 @@ function checkLanguageText() {
         login3 = "Email ή όνομα χρήστη";
         password1 = "Κωδικός πρόσβασης";
         password2 = "Επαλήθευση Κωδικού";
-        social = 'Κοινωνικά Δίκτυα'
     }
 
     document.getElementById("text1").innerHTML = text1;
@@ -31,6 +29,4 @@ function checkLanguageText() {
     document.getElementsByName('password1')[0].placeholder = password1;
     document.getElementsByName('password2')[0].placeholder = password2;
     document.getElementsByName('password3')[0].placeholder = password1;
-    document.getElementById("social").innerHTML = social;
-
 }

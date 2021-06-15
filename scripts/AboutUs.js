@@ -1,5 +1,5 @@
 function checkLanguageText() {
-    let title_text, text1, text2, text3, text4, text5, text6,social;
+    let title_text, text1, text2, text3, text4, text5, text6;
     if (sessionStorage.getItem('language') === 'en') {
         title_text = "About us";
         text1 = "The website \"Helping Hand\" is a project undertaken by a group of 4 students of the Department of Informatics of AUTh. " +
@@ -19,7 +19,6 @@ function checkLanguageText() {
         text6 = "We invite you to contribute to our project by registering on our website and becoming an active member of our effort." +
             " Together we can lay the foundations to shape a better world!\n";
 
-        social ='Social Media'
 
     } else {
         title_text = "Σχετικά με εμάς";
@@ -52,7 +51,6 @@ function checkLanguageText() {
             "                ενεργά μέλη της προσπάθειας μας.Μαζί μπορούμε να τοποθετήσουμε τα θεμέλια για να διαμορφώσουμε ένα\n" +
             "                καλύτερο κόσμο!";
 
-        social = 'Κοινωνικά Δίκτυα'
     }
     document.getElementById("title_text").innerHTML = title_text;
     document.getElementById("text1").innerHTML = text1;
@@ -61,5 +59,4 @@ function checkLanguageText() {
     document.getElementById("text4").innerHTML = text4;
     document.getElementById("text5").innerHTML = text5;
     document.getElementById("text6").innerHTML = text6;
-    document.getElementById("social").innerHTML = social;
 }

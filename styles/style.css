@@ -72,12 +72,12 @@ html, body {
 }
 
 .rect{
-border: 1em red;
-  border-radius: 1.25em;
+    border: 1em red;
+    border-radius: 1.25em;
     box-shadow: rgb(14, 0, 0) 0px 4px 12px;
 
     text-align:center;
-   /* background-image: linear-gradient(to right, darkred , white); */
+    /* background-image: linear-gradient(to right, darkred , white); */
     /* background: linear-gradient(to left, #d31027, #ea384d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /*background: linear-gradient(to right, #d31027, #ea384d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /*background: linear-gradient(to left, #ff512f, #dd2476); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -95,11 +95,11 @@ border: 1em red;
 }
 
 .img-fluid{
-border: 1em ;
-  border-radius: 1.1em;
-/* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
- /*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
- box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 1em ;
+    border-radius: 1.1em;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    /*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 }
 
@@ -115,7 +115,7 @@ border: 1em ;
 }
 
 .shadow p-3 mb-5 bg-white rounded{
-  border-radius: 1.2em;
+    border-radius: 1.2em;
 
 }
 .footerlinks{
@@ -168,87 +168,91 @@ border: 1em ;
 }
 
 .btn {
-  border: none;
-  font-size: inherit;
-  color: inherit;
-  cursor: pointer;
-  padding: 25px 80px;
-  display: inline-block;
-  margin: 15px 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-  outline: none;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /* Pseudo elements for icons */
 .btn:before {
-  font-family: 'FontAwesome';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+.footerRow{
+    text-align: center;
 }
 
 
 /* Icon separator */
 .btn-sep {
-  padding: 25px 60px 25px 120px;
+    padding: 25px 60px 25px 120px;
 }
 
 .btn-sep:before {
-  background: rgba(0,0,0,0.15);
+    background: rgba(0,0,0,0.15);
 }
 
 .btn-3 {
-  background: #e74c3c;
-  color: #fff;
+    background: #e74c3c;
+    color: #fff;
 }
 
 .btn-3:hover {
-  background: #c0392b;
+    background: #c0392b;
 }
 
 .btn-3:active {
-  background: #c0392b;
-  top: 2px;
+    background: #c0392b;
+    top: 2px;
 }
 
 .btn-3:before {
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  line-height: 3;
-  font-size: 140%;
-  width: 60px;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
 }
 
 .bi bi-heart:before {
-  content: "\f55a";
+    content: "\f55a";
 }
 
 
 .carousel-control-prev-icon {
 
-     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
 .carousel-control-next-icon {

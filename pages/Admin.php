@@ -39,6 +39,18 @@ session_start();
                             <a id="item1" class="nav-link" aria-current="page" href="mainpage.php"></a>
                         </li>
 
+                        <div class="col-md-12">
+                            <button onclick="disconnect()" type="button" class="btn btn-danger">Αποσύνδεση</button>
+                        </div>
+
+                        <script>
+                            function disconnect() {
+                                if (confirm('Are you sure you want to disconnect ?')) {
+                                    window.location = 'mainpage.php';
+                                }
+                            }
+                        </script>
+
                     </ul>
 
                 </div>
@@ -320,17 +332,6 @@ session_start();
 
                 </div>
             </div>
-            <div class="col-md-12">
-                <button onclick="disconnect()" type="button" class="btn btn-danger">Αποσύνδεση</button>
-            </div>
-
-            <script>
-                function disconnect() {
-                    if (confirm('Are you sure you want to disconnect ?')) {
-                       window.location = 'mainpage.php';
-                    }
-                }
-            </script>
 
         </div>
     </div>

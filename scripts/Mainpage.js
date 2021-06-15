@@ -30,7 +30,7 @@ function checkLanguageText() {
         btn_sec_title = "Together we can change the world!"
         btn_sec_p1 = "Our site seeks to bring together remarkable people who share a common vision: the eradication of global poverty. Your contribution can help us create a fairer and better world, " +
             "with equal opportunities for all. With a donation of your choice, you help our task to grow and provide more services to people in great need."
-        btn_sec_1 = "DONATE"
+        btn_sec_1 = "Support Here"
         btn_sec_p2 = "We will be very happy for you to become a member of our team and to actively support our effort. You can easily take part in our action by registering on our website. By registering, you will receive constant updates about our work, " +
             "you will have the opportunity to participate in a variety of volunteer activities and you will change for the better the lives of many people plagued by poverty."
         btn_sec_2 = "SIGN-UP"
@@ -73,7 +73,7 @@ function checkLanguageText() {
         btn_sec_title = "Όλοι μαζί μπορούμε να αλλάξουμε τη κατάσταση!"
         btn_sec_p1 = "Ο ιστότοπος μας επιδιώκει την συσπείρωση αξιόλογων ανθρώπων που πρεσβεύουν ενα κοινό όραμα:την εξάλειψη της παγκόσμιας φτώχειας .Η συμβολή σας μπορεί να μας βοηθήσει να διαμορφώσουμε ένα δίκαιο και καλύτερο κόσμο," +
             "με ίσες ευκαιρίες για όλους.Με μια δωρεά της επιλογής σας,βοηθάτε το έργο μας να ανελιχθεί και να παρέχει περισσότερες υπηρεσίες για άπορους ανθρώπους που έχουν μεγάλη ανάγκη."
-        btn_sec_1 = "ΔΩΡΕΑ"
+        btn_sec_1 = "Υποστηρiξτε εδω"
         btn_sec_p2 = "Θα χαρούμε πολύ να γίνετε μέλη της ομάδας μας και να στηρίξετε έμπρακτα τη προσπάθεια μας.Μπορείτε εύκολα να λάβετε μέρος στη δράση μας, με το να πραγματοποιήσετε εγγραφή στον ιστότοπο μας.Με την εγγραφή σας,θα λαμβάνετε συνεχείς ενημερώσεις σχετικά το έργο μας ," +
             " θα έχετε την ευκαιρία να συμμετέχετε σε ποικίλες εθελοντικές δράσεις και θα αλλάξετε προς το καλύτερο τις ζωές πολλών ανθρώπων που μαστίζονται απο τη φτώχεια."
         btn_sec_2 = "ΕΓΓΡΑΦΗ"

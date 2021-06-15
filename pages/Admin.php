@@ -71,7 +71,7 @@ session_start();
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                            <img src="..\images\avatar-1577909_1280 (1).png" alt="Admin"
                                  class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <p></p>

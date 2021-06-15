@@ -49,18 +49,6 @@ html, body {
     font-weight: 400;
 }
 
-/*.carousel-inner img{*/
-/* width:100%;*/
-/* height:100%;*/
-/* box-shadow: 0 0 3px 0 #000;*/
-/*}*/
-
-/*.carousel-inner {*/
-/*    width: 50%;*/
-/*    max-height: 600px;*/
-/*    margin: auto;*/
-/*}*/
-
 
 .carousel-fade .carousel-item, .carousel-item img {
     max-height: 95vh;

@@ -1,5 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+
 * {
     font-size: 100%;
     font-family: 'Open Sans', sans-serif;
@@ -8,6 +9,22 @@
 .jumbotron {
     margin-top: 70px;
     margin-bottom: 70px;
+
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+
+#fo {
+
+    background-color: grey;
+    display: table-row;
+    height: 0;
 
 }
 
@@ -30,6 +47,7 @@
     font-size: 1.2em;
     font-weight: 400;
 }
+
 
 .carousel-fade .carousel-item, .carousel-item img {
     max-height: 95vh;
@@ -62,11 +80,14 @@
 .img-fluid{
     border: 1em ;
     border-radius: 1.1em;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    /*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 }
 
 .header_font{
+    /*font-family: 'Varela',fantasy; */
     font-weight:600;
     text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
@@ -130,10 +151,10 @@
 }
 
 
-
-.bi bi-heart:before {
-    content: "\f55a";
+.footerRow{
+    text-align: center;
 }
+
 
 
 .carousel-control-prev-icon {

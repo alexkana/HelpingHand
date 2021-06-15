@@ -26,10 +26,10 @@ echo '<footer class="bg-dark text-center text-lg-start" id="fo" >
                <small class="text-white" >(+30) 6947483***</small>
                  <a><a/>&nbsp;&nbsp;&nbsp;&nbsp;<a><a/>
          
-                <a id="emailText" class="text-white"   href = "mailto: helpinghandauth@gmail.com"><small>helpinghandauth@gmail.com</small></a>
+                <a id="emailText" class="text-white"    href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=helpinghandauth@gmail.com"><small>helpinghandauth@gmail.com</small></a>
             </div>
             
-            
+           
             <!--Grid column-->
             <!--Grid column-->
         </div>

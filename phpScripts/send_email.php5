@@ -1,8 +1,8 @@
 <?php
 global $conn;
 include("dbconnect.php5");
-$email = $_POST["user_email"];
-$text = $_POST["message"];
+$email = $conn->real_escape_string($_POST["user_email"]);
+$text = $conn->real_escape_string($_POST["message"]);
 if($email == null or $text == null)
     exit();
 $sql_query = "INSERT INTO emails (sender, content) VALUES ('$email','$text');";

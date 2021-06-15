@@ -4,9 +4,9 @@ session_start();
 if (isset($_POST['login1'])) {
     global $conn;
     include("../phpScripts/dbconnect.php5");
-    $username = $_POST['login1'];
-    $email = $_POST['login2'];
-    $password = $_POST['password1'];
+    $username = $conn->real_escape_string( $_POST['login1']);
+    $email = $conn->real_escape_string($_POST['login2']);
+    $password = $conn->real_escape_string($_POST['password1']);
     if ($email == null or $username == null)
         exit();
     $sql_query = "INSERT INTO users (name,password,email) VALUES ('$username','$password','$email');";
@@ -18,9 +18,9 @@ if (isset($_POST['login1'])) {
         $record = $res->fetch_assoc();
         unset($_SESSION['login_error']);
         $_SESSION['id'] = $record['id'];
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        $_SESSION['email'] = $email;
+        $_SESSION['username'] = $record['name'];
+        $_SESSION['password'] = $record['password'];
+        $_SESSION['email'] = $record['email'];
         $_SESSION['about'] = $record['about'];
         $conn->close();
         header("Location: ../pages/UserPage.php");
@@ -34,8 +34,8 @@ if (isset($_POST['login1'])) {
 if (isset($_POST['login3'])) {
     global $conn;
     include("../phpScripts/dbconnect.php5");
-    $username = $_POST['login3'];
-    $password = $_POST['password3'];
+    $username = $conn->real_escape_string($_POST['login3']);
+    $password = $conn->real_escape_string($_POST['password3']);
     $sql_query = "SELECT * FROM users WHERE password = '$password' AND (name = '$username' OR email='$username')";
     $res = $conn->query($sql_query);
     $conn->close();

@@ -128,7 +128,7 @@ session_start();
                         }
                     } else if (text === 1) {
                         if (confirm('Are you sure you want to disconnect ?')) {
-                            window.location = 'mainpage.php'
+                            window.location = 'LoginPage.php'
                             document.getElementById("item6").style.display = "none";
                             document.getElementById("item5").style.display = "block";
                             sessionStorage.setItem("showProfile", "false");

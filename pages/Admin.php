@@ -259,7 +259,7 @@ session_start();
                     </table>
 
                 </div>
-                <button onclick="addOrgForm()" type="button" class="btn btn-primary">Προσθήκη Οργανισμού</button>
+                <button onclick="addOrgForm()" type="button" class="btn btn-primary ">Προσθήκη Οργανισμού</button>
             </div>
             <div class="col-md-12">
                 <h3>Email</h3>
